@@ -15,7 +15,6 @@ if (navToggle) {
 /* Validate if constant exist */
 if (navClose) {
   navClose.addEventListener("click", () => {
-    // console.log('shode')
     navMenu.classList.remove("show-menu");
   });
 }
