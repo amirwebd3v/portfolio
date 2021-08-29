@@ -191,12 +191,12 @@ img {
     color: var(--first-color);
 }
 
-.nav__list{
-    grid-template-columns: repeat(3, 1fr) ;
+.nav__list {
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
-.nav__link{
+.nav__link {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -205,27 +205,32 @@ img {
     font-weight: var(--font-medium);
 }
 
-.nav__link:hover{
+.nav__link:hover {
     color: var(--first-color);
 }
 
-.nav__icon{
+.nav__icon {
     font-size: 1.2rem;
 }
 
-.nav__close{
+.nav__close {
     position: absolute;
     right: 1.3rem;
     bottom: 0.5rem;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+.nav__close:hover {
     color: var(--first-color);
 }
 
-.nav__close:hover{
-    color: var(--first-color-alt);
+/* SHOW MENU */
+
+.show-menu {
+    bottom: 0;
 }
 
-/* SHOW MENU */
+
 
 /* ACTIVE LINK */

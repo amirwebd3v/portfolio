@@ -1,78 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title></title>
-    <meta name="manOfCode" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="manOfCode" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--================= UNICONS =================-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
     <!--================= SWIPER CSS =================-->
 
-
     <!--================= CSS =================-->
-    <link href="assets/css/styles.css" rel="stylesheet">
-</head>
-<body>
-<!--================= HEADER =================-->
-<header class="header" id="header">
-    <nav class="nav container">
+    <link href="assets/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--================= HEADER =================-->
+    <header class="header" id="header">
+      <nav class="nav container">
         <a href="#" class="nav__logo">AmirHossein</a>
         <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list grid">
-                <li class="nav__item">
-                    <a class="nav__link nav__icon" href="#home">
-                        <i class="uil uil-estate"></i> Home
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link nav__icon" href="#about">
-                        <i class="uil uil-user-exclamation"></i> About
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link nav__icon" href="#skills">
-                        <i class="uil uil-file-alt"></i> Skills
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link nav__icon" href="#services">
-                        <i class="uil uil-briefcase-alt"></i> Services
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link nav__icon" href="#portfolio">
-                        <i class="uil uil-scenery"></i> Portfolio
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link nav__icon" href="#contact">
-                        <i class="uil uil-message"></i> Contact Me
-                    </a>
-                </li>
-            </ul>
-            <i class="uil uil-times nav__close" id="nav-close"></i>
+          <ul class="nav__list grid">
+            <li class="nav__item">
+              <a class="nav__link" href="#home">
+                <i class="uil uil-estate nav__icon"></i> Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">
+                <i class="uil uil-user-exclamation nav__icon"></i> About
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#skills">
+                <i class="uil uil-file-alt nav__icon"></i> Skills
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#services">
+                <i class="uil uil-briefcase-alt nav__icon"></i> Services
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#portfolio">
+                <i class="uil uil-scenery nav__icon"></i> Portfolio
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link" href="#contact">
+                <i class="uil uil-message nav__icon"></i> Contact Me
+              </a>
+            </li>
+          </ul>
+          <i class="uil uil-times nav__close" id="nav-close"></i>
         </div>
 
         <div class="nav__btns">
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="uil uil-apps"></i>
-            </div>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="uil uil-apps"></i>
+          </div>
         </div>
-    </nav>
+      </nav>
+    </header>
+    <!--================= MAIN =================-->
+    <main class="main">
+      <!--================= HOME =================-->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__content grid">
+            <div class="home__social">
+              <a href="" class="home__social-icon">
+                <i class="uil uil-linkedin-alt"></i>
+              </a>
+              <a href="" class="home__social-icon">
+                <i class="uil uil-github-alt"></i>
+              </a>
+              <a href="" class="home__social-icon">
+                <i class="uil uil-instagram"></i>
+              </a>
+            </div>
 
-</header>
-<!--================= MAIN =================-->
-<main class="main">
+            <div class="home__img">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0" mask-type="alpha">
+                  <path
+                    fill="#FFB037"
+                    d="M59.4,-60.8C74.3,-44.6,81.6,-22.3,81.7,0.1C81.8,22.5,74.7,45,59.9,59.7C45,
+                    74.4,22.5,81.3,0.8,80.5C-20.8,79.6,-41.7,71.1,-57.1,56.4C-72.5,41.7,-82.4,20.8,
+                    -83.3,-0.9C-84.2,-22.6,-75.9,-45.2,-60.5,-61.3C-45.2,-77.4,-22.6,-87.2,-0.1,-87C22.3,
+                    -86.9,44.6,-76.9,59.4,-60.8Z"
+                    transform="translate(100 100)"
+                  />
+                </mask>
+                <g mask="url(#mask0)">
+                  <path
+                    fill="#FFB037"
+                    d="M59.4,-60.8C74.3,-44.6,81.6,-22.3,81.7,0.1C81.8,22.5,74.7,45,59.9,59.7C45,
+                    74.4,22.5,81.3,0.8,80.5C-20.8,79.6,-41.7,71.1,-57.1,56.4C-72.5,41.7,-82.4,20.8,
+                    -83.3,-0.9C-84.2,-22.6,-75.9,-45.2,-60.5,-61.3C-45.2,-77.4,-22.6,-87.2,-0.1,-87C22.3,
+                    -86.9,44.6,-76.9,59.4,-60.8Z"
+                    transform="translate(100 100)"
+                  />
+                  <image
+                    class="home__blob-img"
+                    xlink:href="assets/img/profile.png"
+                  />
+                </g>
+              </svg>
+            </div>
 
-</main>
-<!--================= FOOTER =================-->
-<!--================= SCROLL TOP =================-->
-<!--================= SWIPER JS =================-->
-<!--================= MAIN JS =================-->
-<script src="assets/js/main.js"></script>
+            <div class="home__data">
+              <h1 class="home__title">Hi, It's AmirHossein</h1>
+              <h2 class="home__subtitle">Software Engineer</h2>
+              <p class="home__description">
+                Junior level in web design and development knowledge, producing
+                quality work.
+              </p>
+              <a href="#contact" class="button button--flex">
+                Contact Me<i class="uil uil-message button__icon"></i>
+              </a>
+            </div>
 
-</body>
-
+            <div class="home__scroll">
+                <a href="" class="home__scroll-button button--flex">
+                    <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                    <span class="home__scroll-name">Scroll down</span>
+                    <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--================= ABOUT =================-->
+      <!--================= SKILLS =================-->
+      <!--================= QUALIFICATIONS =================-->
+      <!--================= SERVICES =================-->
+      <!--================= PORTFOLIO =================-->
+    </main>
+    <!--================= FOOTER =================-->
+    <!--================= SCROLL TOP =================-->
+    <!--================= SWIPER JS =================-->
+    <!--================= MAIN JS =================-->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
