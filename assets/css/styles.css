@@ -678,6 +678,10 @@ img {
     margin-right: var(--mb-0-25);
 }
 /* ACTIVE MODAL */
+.active-modal{
+    opacity: 1;
+    visibility: visible;
+}
 /*================= SKILLS =================*/
 /*================= SKILLS =================*/
 /*================= SKILLS =================*/
