@@ -684,6 +684,86 @@ img {
     visibility: visible;
 }
 
-/*================= SKILLS =================*/
-/*================= SKILLS =================*/
-/*================= SKILLS =================*/
+/*================= PORTFOLIO =================*/
+.portfolio__container{
+    overflow: initial;
+}
+
+.portfolio__content{
+    padding: 1rem 3.5rem 3.2rem 1rem;
+}
+
+.portfolio__data{   
+    padding-left: 2rem;
+    padding-right: 2rem;
+    justify-content: center;
+}
+.portfolio__img{
+    width: 365px;
+    border-radius: 0.5rem;
+    justify-self: center;
+}
+
+.portfolio__title{
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+
+.portfolio__description{
+    margin-bottom: var(--mb-0-75);
+}
+
+.portfolio__button:hover .button__icon{
+    transform: translateX(0.25rem);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    content: '';
+}
+
+.swiper-portfolio-icon{
+    font-size: 2rem;
+    color: var(--first-color);
+}
+
+.swiper-button-prev{
+    left: -0.5rem;
+}
+
+.swiper-portfolio-icon{
+    font-size: 2rem;
+    color: var(--first-color);
+}
+
+.swiper-button-prev{
+    left: 0.5rem;
+}
+
+.swiper-button-next{
+    right: 3rem;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets{
+    bottom: 2.5rem;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: var(--first-color);
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullet{
+    outline: none;
+}
+/*================= PROJECT IN MIND =================*/
+/*================= TESTIMONIAL =================*/
+/*================= CONTACT ME =================*/
+/*================= FOOTER =================*/
+/*================= SCROLL UP =================*/
+
+/* SHOW SCROLL */
+
+
+/*================= MEDIA QUERIES =================*/

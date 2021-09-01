@@ -9,7 +9,7 @@
     <!--================= UNICONS =================-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <!--================= SWIPER CSS =================-->
-
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!--================= CSS =================-->
     <link href="assets/css/styles.css" rel="stylesheet" />
 </head>
@@ -471,38 +471,49 @@
             <h2 class="section__title">Portfolio</h2>
             <span class="section__subtitle">Most recent work</span>
 
-            <div class="portfolio__container container">
-                <!--================= PORTFOLIO 1=================-->
-                <div class="portfolio__content grid">
-                    <img src="assets/img/portfolio-1.png" alt="" class="portfolio__img">
+            <div class="portfolio__container container swiper-wrapper">
+                <div class="swiper-wrapper">
+                    <!--================= PORTFOLIO 1=================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/portfolio-1.png" alt="" class="portfolio__img">
 
-                    <div class="portfolio__data">
-                        <h3 class="portfolio__title">Modern Website</h3>
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Modern Website</h3>
 
-                        <p class="portfolio__description">Progressive web app adaptable to all devices,
-                            with ui components and various features.</p>
+                            <p class="portfolio__description">Progressive web app adaptable to all devices,
+                                with ui components and various features.</p>
 
-                        <a href="#" class="button button--flex button-small portfolio__button">
-                            Demo <i class="uil uil-arrow-right button__icon"></i>
-                        </a>
+                            <a href="#" class="button button--flex button-small portfolio__button">
+                                Demo <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--================= PORTFOLIO 2=================-->
+                    <div class="portfolio__content grid swiper-slide">
+                        <img src="assets/img/portfolio-2.jpg" alt="" class="portfolio__img">
+
+                        <div class="portfolio__data">
+                            <h3 class="portfolio__title">Online Store</h3>
+
+                            <p class="portfolio__description">Progressive web app adaptable to all devices,
+                                with ui components and various features.</p>
+
+                            <a href="#" class="button button--flex button-small portfolio__button">
+                                Demo <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                 <!--================= PORTFOLIO 2=================-->
-                 <div class="portfolio__content grid">
-                    <img src="assets/img/portfolio-2.jpg" alt="" class="portfolio__img">
-
-                    <div class="portfolio__data">
-                        <h3 class="portfolio__title">Online Store</h3>
-
-                        <p class="portfolio__description">Progressive web app adaptable to all devices,
-                            with ui components and various features.</p>
-
-                        <a href="#" class="button button--flex button-small portfolio__button">
-                            Demo <i class="uil uil-arrow-right button__icon"></i>
-                        </a>
-                    </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
                 </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
         </section>
         <!--================= PROJECTS IN MIND =================-->
@@ -513,6 +524,7 @@
     <!--================= FOOTER =================-->
     <!--================= SCROLL TOP =================-->
     <!--================= SWIPER JS =================-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
     <!--================= MAIN JS =================-->
     <script src="assets/js/main.js"></script>
 </body>
