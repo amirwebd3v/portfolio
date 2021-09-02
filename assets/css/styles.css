@@ -699,7 +699,7 @@ img {
     justify-content: center;
 }
 .portfolio__img{
-    width: 365px;
+    width: 355px;
     border-radius: 0.5rem;
     justify-self: center;
 }
@@ -737,7 +737,7 @@ img {
 }
 
 .swiper-button-prev{
-    left: 0rem;
+    left: 0.25rem;
 }
 
 .swiper-button-next{
@@ -745,7 +745,7 @@ img {
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets{
-    bottom: 2.5rem;
+    bottom: 1rem;
 }
 
 .swiper-pagination-bullet-active{
