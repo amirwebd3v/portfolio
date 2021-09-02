@@ -69,38 +69,53 @@ const modalViews = document.querySelectorAll('.services__modal')
 const modalBtns = document.querySelectorAll('.services__button')
 const modalCloses = document.querySelectorAll('.services__modal-close')
 
-let modal = function(modalClick){
+let modal = function (modalClick) {
     modalViews[modalClick].classList.add('active-modal')
 }
 
-modalBtns.forEach((modalBtns,i)=>{
-    modalBtns.addEventListener('click',()=>{
+modalBtns.forEach((modalBtns, i) => {
+    modalBtns.addEventListener('click', () => {
         modal(i)
     })
 })
 
-modalCloses.forEach((modalCloses)=>{
-    modalCloses.addEventListener('click', ()=> {
-        modalViews.forEach((modalView)=>{
+modalCloses.forEach((modalCloses) => {
+    modalCloses.addEventListener('click', () => {
+        modalViews.forEach((modalView) => {
             modalView.classList.remove('active-modal')
         })
     })
 })
 /*================= PORTFOLIO SWIPER =================*/
-let swiper = new Swiper(".portfolio__container", {
+let swiperPortfolio = new Swiper(".portfolio__container", {
     cssMode: true,
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
-  });
+});
 /*================= TESTIMONIAL =================*/
+let swiperTestimonial = new Swiper(".testimonial__container", {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 48,
 
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+    },
+    breakpoints:{
+        568:{
+            slidesPerView: 2,
+        }
+    }
+});
 /*================= SCROLL SECTION ACTIVE LINK =================*/
 
 /*================= CHANGE BACKGROUND HEADER =================*/
