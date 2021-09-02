@@ -70,7 +70,7 @@
 body.dark-theme {
   /* HSL color mode */
 
-  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  --first-color-second: hsl(var(--hue-color), 90%, 8%);
   --title-color: hsl(var(--hue-color), 8%, 95%);
   --text-color: hsl(var(--hue-color), 16%, 75%);
   --input-color: hsl(var(--hue-color), 29%, 16%);
@@ -990,6 +990,9 @@ img {
 .show-scroll {
   bottom: 5rem;
 }
+
+/*================= SCROLL BAR =================*/
+
 /*================= MEDIA QUERIES =================*/
 /* FOR SMALL DEVICES */
 /* FOR MEDIUM DEVICES */
