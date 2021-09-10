@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Admin</title>
+    <!--================= UNICONS =================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+    <!--================= CSS =================-->
+    <link href="assets/css/admin_styles.css" rel="stylesheet" />
+    <link href="assets/css/grid.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!--================= SIDEBAR =================-->
+    <div class="sidebar">
+        <div class="sidebar__logo">
+            <img src="assets/img/admin_img/logo-manOfCode.png" alt="ManOfCode logo">
+            <div class="sidebar__close" id="sidebar-close">
+                <i class="uil uil-arrow-left"></i>
+            </div>
+        </div>
+        <div class="sidebar__user">
+            <div class="sidebar__user-info">
+                <img class="profile__img" src="assets/img/portfolio_img/profile.png" alt="User picture">
+                <div class="sidebar__user-name">
+                    AmirHossein Zahmatmand
+                </div>
+                <button class="button button-outline">
+                    <i class="uil uil-signout"></i>
+                </button>
+            </div>
+        </div>
+        <!--================= SIDEBAR MENU =================-->
+        <ul class="sidebar__menu">
+            <li>
+                <a href="#" class="sidebar__menu-active">
+                    <i class="uil uil-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="uil uil-inbox"></i>
+                    <span>Message Inbox</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="uil uil-scenery"></i>
+                    <span>Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="uil uil-setting"></i>
+                    <span>Settings</span>
+                </a>
+                <ul class="sidebar__menu sidebar__menu-dropdown-content">
+                    <li>
+                        <a href="#" class="darkmode__toggle" id="darkmode-toggle">
+                            Dark mode
+                            <span class="darkmode__switch"></span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidebar__submenu">
+                <a href="#" class="sidebar__menu-dropdown">
+                    <i class="uil uil-user-square"></i>
+                    <span>Account</span>
+                    <div class="dropdown__icon"></div>
+                </a>
+                <ul class="sidebar__menu sidebar__menu-dropdown-content">
+                    <li>
+                        <a href="#">
+                            Edit Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            ex2
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            ex3
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+    <!--================= MAIN JS =================-->
+    <script src="assets/js/admin_js.js"></script>
+    <!--================= APEX CHART =================-->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</body>
+
+</html>
