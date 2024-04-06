@@ -55,20 +55,6 @@
                     <span>Portfolio</span>
                 </a>
             </li>
-            <li>
-                <a href="#">
-                    <i class="uil uil-setting"></i>
-                    <span>Settings</span>
-                </a>
-                <ul class="sidebar__menu sidebar__menu-dropdown-content">
-                    <li>
-                        <a href="#" class="darkmode__toggle" id="darkmode-toggle">
-                            Dark mode
-                            <span class="darkmode__switch"></span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
             <li class="sidebar__submenu">
                 <a href="#" class="sidebar__menu-dropdown">
                     <i class="uil uil-user-square"></i>
@@ -93,12 +79,72 @@
                     </li>
                 </ul>
             </li>
+            <li class="sidebar__submenu">
+                <a href="#" class="sidebar__menu-dropdown">
+                    <i class="uil uil-setting"></i>
+                    <span>Settings</span>
+                    <div class="dropdown__icon"></div>
+                </a>
+                <ul class="sidebar__menu sidebar__menu-dropdown-content">
+                    <li>
+                       
+                    </li>
+
+                </ul>
+            </li>
         </ul>
     </div>
 
+    <!--================= MAIN CONTENT =================-->
+    <div class="main">
+        <div class="main__header">
+            <div class="mobile__toggle" id="mobile-toggle">
+                <i class="uil uil-list-ui-alt"></i>
+            </div>
+            <div class="main__title">
+                Dashboard
+            </div>
+        </div>
+        <div class="main__content">
+            <div class="row">
+                <div class="col-3 col-md-6 col-sm-12">
+                    <div class="box box__hover">
+                        <!--================= COUNTER =================-->
+                        <div class="counter">
+                            <div class="counter__title">
+                                total view
+                            </div>
+                                <div class="counter__info">
+                                    <div class="counter__count">
+                                        153
+                                    </div>
+                                    <i class="uil uil-eye"></i>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-md-6 col-sm-12">
+                    <div class="box box__hover">
+                        <!--================= COUNTER =================-->
+                        <div class="counter">
+                            <div class="counter__title">
+                                total view
+                            </div>
+                                <div class="counter__info">
+                                    <div class="counter__count">
+                                        153
+                                    </div>
+                                    <i class="uil uil-eye"></i>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
 
-
-
+    <div class="overlay"></div>
 
     <!--================= MAIN JS =================-->
     <script src="assets/js/admin_js.js"></script>
