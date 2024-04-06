@@ -54,9 +54,9 @@ nextTick(() => {
       <v-list-item class="drawer-footer px-0 d-flex flex-column justify-center">
         <div
           class="text-primary"
-          style="white-space: nowrap"
+          style="white-space: nowrap; font-size: 15px;"
         >
-          &copy; Powered By
+          <span style="font-size: 21px;">&#9824;</span> Powered By
           <a
             href="https://github.com/amirhidevs"
             class="pt-6 pt-md-0 text-decoration-none text-white"

@@ -1,10 +1,15 @@
 <script setup lang="ts">
-import type { RouteRecordRaw } from 'vue-router/auto'
+import obj from "svgo/lib/svgo/css-select-adapter";
 defineOptions({ name: 'AppDrawerItem' })
-const props = withDefaults(
-  defineProps<{ level?: number; item: RouteRecordRaw }>(),
-  { level: 0 },
-)
+const props = defineProps({
+  level : {
+    type : Number,
+    default : 0,
+  },
+  item : {
+    type : obj,
+  }
+})
 const visibleChildren = computed(() =>
   props.item.children
     ?.filter((child) => child.meta?.icon)
