@@ -7,10 +7,10 @@ const route = useRoute()
 const breadcrumbs = computed(() => {
   return route!.matched
     .filter(
-      (item) =>
+      (item : object) =>
         item.meta && item.meta.title && !(item.meta?.breadcrumb === 'hidden'),
     )
-    .map((r) => ({
+    .map((r : object) => ({
       title: r.meta.title!,
       disabled:
         r.meta?.breadcrumb === 'disabled' || r.path === route.path || false,

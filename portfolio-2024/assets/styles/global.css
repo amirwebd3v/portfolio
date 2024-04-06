@@ -61,11 +61,11 @@ html {
 /* https://github.com/vuetifyjs/vuetify/issues/15202 */
 .v-app-bar,
 .v-footer {
-  left: 345px;
-  width: calc(100% - 345px);
+  left: 368px;
+  width: calc(100% - 368px);
 }
 .v-navigation-drawer {
-  width: 345px;
+  width: 368px;
   transition: box-shadow, transform, visibility, width, height, left, right, top, bottom, border-radius 0.2s ease-in-out;
   overflow: hidden;
   border: none;
@@ -126,3 +126,13 @@ html {
   }
 }
 
+
+.text-justify{
+  text-align: justify !important;
+  text-justify: auto !important;
+}
+
+.text-center {
+  text-align: center !important;
+  text-justify: auto !important;
+}
