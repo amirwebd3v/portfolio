@@ -5,7 +5,7 @@ import type { VBtn } from 'vuetify/components/VBtn'
 definePageMeta({
   icon: 'mdi-security',
   title: 'Auth',
-  drawerIndex: 5,
+  drawerIndex: 4,
   middleware: 'auth',
 })
 

@@ -64,6 +64,8 @@ html {
   left: 368px;
   width: calc(100% - 368px);
 }
+
+
 .v-navigation-drawer {
   width: 368px;
   transition:
@@ -111,7 +113,7 @@ html {
     overflow-y: hidden;
 
     &:hover {
-      overflow-y: overlay;
+      overflow: auto;
     }
   }
 
