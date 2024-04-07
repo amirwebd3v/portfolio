@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import type { DataTableHeaders } from '~/plugins/vuetify'
-import type {VBtn} from "vuetify/components/VBtn";
+import type { VBtn } from 'vuetify/components/VBtn'
 
 definePageMeta({
   icon: 'mdi-security',
   title: 'Auth',
-  drawerIndex: 4,
+  drawerIndex: 5,
   middleware: 'auth',
 })
 

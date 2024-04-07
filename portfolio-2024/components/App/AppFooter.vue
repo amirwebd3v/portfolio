@@ -3,7 +3,7 @@
     <v-defaults-provider
       :defaults="{ VBtn: { variant: 'text', size: 'x-small' } }"
     >
-    <v-spacer/>
+      <v-spacer />
       <AppNotification />
       <AppSettings />
     </v-defaults-provider>

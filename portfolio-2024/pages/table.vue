@@ -5,7 +5,7 @@ import type { DataTableHeaders } from '~/plugins/vuetify'
 definePageMeta({
   icon: 'mdi-table',
   title: 'Data Table',
-  drawerIndex: 3,
+  drawerIndex: 4,
 })
 
 const search = ref('')

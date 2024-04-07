@@ -7,10 +7,10 @@ const route = useRoute()
 const breadcrumbs = computed(() => {
   return route!.matched
     .filter(
-      (item : object) =>
+      (item) =>
         item.meta && item.meta.title && !(item.meta?.breadcrumb === 'hidden'),
     )
-    .map((r : object) => ({
+    .map((r) => ({
       title: r.meta.title!,
       disabled:
         r.meta?.breadcrumb === 'disabled' || r.path === route.path || false,
@@ -27,7 +27,7 @@ const { loggedIn, clear, user } = useUserSession()
 </script>
 
 <template>
-  <v-app-bar flat >
+  <v-app-bar flat v-if="route.name === 'homepage' ? $vuetify.display.smAndDown : true">
     <v-app-bar-nav-icon @click="drawer = !drawer" />
     <v-breadcrumbs :items="breadcrumbs" />
     <v-spacer />

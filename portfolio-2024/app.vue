@@ -23,14 +23,14 @@ useSeoMeta({
   twitterImage: '/social-image.png',
   twitterCard: 'summary_large_image',
 })
+
 </script>
 
 <template>
   <v-app>
     <AppDrawer />
-    <AppBar />
-    <!-- https://github.com/vuetifyjs/vuetify/issues/15202 -->
-    <v-main style="--v-layout-top: 64px; --v-layout-bottom: 32px">
+    <AppBar/>
+    <v-main :style="route.name !== 'homepage' ? 'margin-top: 64px;' : 'margin-top: 0'">
       <NuxtPage />
     </v-main>
     <AppFooter />
@@ -40,10 +40,9 @@ useSeoMeta({
 <style scoped>
 .v-main {
   padding-top: 0;
-  margin-top: var(--v-layout-top);
   padding-bottom: 0;
-  margin-bottom: var(--v-layout-bottom);
-  height: calc(100vh - var(--v-layout-top) - var(--v-layout-bottom));
+  margin-bottom: 0;
+  height: calc(100vh - 64px - 32px);
   overflow-y: auto;
   transition-property: padding;
 }

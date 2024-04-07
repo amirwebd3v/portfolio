@@ -2,7 +2,7 @@
 definePageMeta({
   icon: 'mdi-monitor-dashboard',
   title: 'Dashboard',
-  drawerIndex: 1,
+  drawerIndex: 2,
 })
 const stats = ref([
   {

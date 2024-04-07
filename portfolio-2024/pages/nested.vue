@@ -2,7 +2,7 @@
 definePageMeta({
   title: 'Nested Routes',
   icon: 'mdi-view-list',
-  drawerIndex: 2,
+  drawerIndex: 3,
   breadcrumb: 'disabled',
 })
 </script>

@@ -12,21 +12,18 @@ Object.keys(mdicons).forEach((key) => {
   ] = value
 })
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
   build: {
     transpile: ['vue-echarts', 'resize-detector'],
   },
-  // you can turn on SSR but Vuetify has a layout bug
-  // https://github.com/vuetifyjs/vuetify/issues/15202
+
   ssr: true,
   modules: [
     '@pinia/nuxt',
     '@vueuse/nuxt',
     'vuetify-nuxt-module',
     'nuxt-auth-utils',
-    '@nuxt/eslint',
     '@nuxt/test-utils/module',
   ],
   css: ['~/assets/styles/index.css'],

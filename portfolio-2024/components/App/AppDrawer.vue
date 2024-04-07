@@ -3,6 +3,7 @@ const router = useRouter()
 const routes = router.getRoutes().filter((r) => r.path.lastIndexOf('/') === 0)
 const drawerState = useState('drawer', () => true)
 
+
 const { mobile, lgAndUp, width } = useDisplay()
 const drawer = computed({
   get() {
@@ -13,9 +14,7 @@ const drawer = computed({
   },
 })
 const rail = computed(() => !drawerState.value && !mobile.value)
-routes.sort((a: object, b: object) =>
-    (a.meta?.drawerIndex ?? 99) - (b.meta?.drawerIndex ?? 98),
-)
+routes.sort((a, b) => (a.meta?.drawerIndex ?? 99) - (b.meta?.drawerIndex ?? 98))
 
 nextTick(() => {
   drawerState.value = lgAndUp.value && width.value !== 1280
@@ -29,19 +28,11 @@ nextTick(() => {
         <v-img
           class="rounded-circle mx-auto mb-5"
           :height="drawerState ? 256 : 36"
-          :width="drawerState ? 256 : 36"
-          src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"
+          :width="drawerState  ? 256 : 36"
+          src="https://1.gravatar.com/avatar/9c5e817f83c3885d42835fd5923dfd266b393d5aa11bad97c7162919610d8ef7?size=256"
           cover
         />
         <v-list-item class="pa-1" v-if="drawerState">
-          <!--          <template #prepend>-->
-          <!--            <v-icon-->
-          <!--              icon=""-->
-          <!--              size="x-large"-->
-          <!--              class="drawer-header-icon"-->
-          <!--              color="primary"-->
-          <!--            />-->
-          <!--          </template>-->
           <v-list-item-title
             class="text-h5 font-weight-bold text-center"
             style="line-height: 2rem"
@@ -58,7 +49,7 @@ nextTick(() => {
       </v-list>
     </template>
     <v-list nav density="compact" v-if="drawerState">
-      <p class="text-justify">
+      <p class="text-justify mb-2">
         As a <span class="text-primary">talented</span>
         web developer with a passion for creating
         <span class="text-primary">innovative</span>
