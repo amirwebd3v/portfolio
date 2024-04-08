@@ -23,14 +23,14 @@ definePageMeta({
     </p>
     <p id="head5" class="header text-primary">Welcome to BA designs</p>
     <div class="light x1"></div>
-    <div class="light x2" v-if='$vuetify.display.smAndUp'></div>
+    <div class="light x2" v-show='$vuetify.display.smAndUp'></div>
     <div class="light x3"></div>
-    <div class="light x4" v-if='$vuetify.display.smAndUp'></div>
+    <div class="light x4" v-show='$vuetify.display.smAndUp'></div>
     <div class="light x5"></div>
-    <div class="light x6" v-if='$vuetify.display.smAndUp'></div>
-    <div class="light x7" v-if='$vuetify.display.smAndUp'></div>
+    <div class="light x6" v-show='$vuetify.display.smAndUp'></div>
+    <div class="light x7" v-show='$vuetify.display.smAndUp'></div>
     <div class="light x8"></div>
-    <div class="light x9" v-if='$vuetify.display.smAndUp'></div>
+    <div class="light x9" v-show='$vuetify.display.smAndUp'></div>
   </div>
 </template>
 
@@ -41,7 +41,7 @@ definePageMeta({
   margin: 0;
   height: 100vh;
   font-weight: 100;
-  background: radial-gradient(#1f1013, #03192c);
+  background: radial-gradient(#530426, #03192c);
   overflow-y: hidden;
   animation: fadeIn 1 1s ease-out;
 }

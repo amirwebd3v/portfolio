@@ -12,10 +12,11 @@ html {
 .v-theme--light {
   &.v-icon--clickable,
   &.v-btn--icon {
-    color: rgba(0, 0, 0, 0.54);
+    color: rgb(0, 0, 0);
   }
   --v-border-opacity: 0.09 !important;
   --v-theme-background: 243, 243, 243 !important;
+
 }
 
 .v-app-bar .v-navigation-drawer .v-footer {

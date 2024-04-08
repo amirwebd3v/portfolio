@@ -33,7 +33,6 @@ const { loggedIn, clear, user } = useUserSession()
     <v-spacer />
     <div id="app-bar" />
     <client-only>
-      <div>
         <v-switch
           :model-value="isDark"
           color=""
@@ -45,17 +44,7 @@ const { loggedIn, clear, user } = useUserSession()
           style="opacity: 0.8"
           @update:model-value="toggleDark"
         />
-      </div>
     </client-only>
-    <v-btn
-      icon
-      href="https://github.com/kingyue737/vitify-nuxt"
-      size="small"
-      class="ml-2"
-      target="_blank"
-    >
-      <v-icon size="30" icon="mdi-github" />
-    </v-btn>
     <v-menu location="bottom">
       <template #activator="{ props: menu }">
         <v-tooltip location="bottom">

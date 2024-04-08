@@ -12,18 +12,17 @@ const title = computed(() => {
 })
 useHead({
   title,
-  titleTemplate: (t) => (t ? `${t} | Vitify Admin` : 'Vitify Admin'),
+  titleTemplate: (t) => (t ? `${t} | AmirZm` : 'Amirhossein'),
   htmlAttrs: { lang: 'en' },
   link: [{ rel: 'icon', href: '/favicon.ico' }],
 })
 useSeoMeta({
   viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
-  description: 'Vuetify 3 + Nuxt 3, Opinionated Admin Starter Template',
+  description: 'Amir , Web developer (Nuxt, Laravel) , Designer',
   ogImage: '/social-image.png',
   twitterImage: '/social-image.png',
   twitterCard: 'summary_large_image',
 })
-
 </script>
 
 <template>
@@ -33,7 +32,7 @@ useSeoMeta({
     <v-main :style="route.name !== 'homepage' ? 'margin-top: 64px;' : 'margin-top: 0'">
       <NuxtPage />
     </v-main>
-    <AppFooter />
+    <AppFooter/>
   </v-app>
 </template>
 

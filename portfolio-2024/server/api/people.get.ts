@@ -2,7 +2,7 @@ export default eventHandler(async (event) => {
   await requireUserSession(event)
 
   // List todos for the current user
-  const people = [
+  return [
     {
       id: 1,
       name: 'Lindsay Walton',
@@ -95,6 +95,4 @@ export default eventHandler(async (event) => {
       role: 'Owner',
     },
   ]
-
-  return people
 })

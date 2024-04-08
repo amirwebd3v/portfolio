@@ -65,7 +65,7 @@ const stats = ref([
       >
         <StatsCard
           :title="stat.title"
-          :unit="stat.unit"
+          :unit="stat?.unit"
           :color="stat.color"
           :icon="stat.icon"
           :value="stat.value"
