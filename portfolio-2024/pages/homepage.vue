@@ -11,30 +11,106 @@ definePageMeta({
   title: 'Homepage',
   drawerIndex: 0,
 })
+
+
+onMounted(() => {
+  consoleText(['bye', 'A freelance software engineer with.'], 'text');
+})
+
+
+
+
+function consoleText(words: string[], id: string, color: string = '#fff') : () => void {
+  const console = document.getElementById('console');
+  const target = document.getElementById(id);
+
+  if (!console || !target) {
+    throw new Error('Console or target element not found');
+  }
+
+  target.style.color = color;
+
+  let visibleCursor = true;
+  let letterIndex = 0;
+  let currentWordIndex = 0;
+  let isWaiting = false;
+
+  const typingInterval = setInterval(() => {
+    if (letterIndex === words[currentWordIndex].length && !isWaiting) {
+      isWaiting = true;
+      if (words.length > 1) {
+        target.innerHTML += '<br>';
+      }
+      setTimeout(() => {
+        words.shift();
+        letterIndex = 0;
+        currentWordIndex = 0;
+        target.style.color = color;
+        isWaiting = false;
+      }, 1000);
+    } else if (!isWaiting) {
+      target.innerHTML += words[currentWordIndex][letterIndex];
+      letterIndex += 1;
+    }
+  }, 120);
+
+  const cursorInterval = setInterval(() => {
+    console.className = visibleCursor
+      ? 'console-underscore hidden'
+      : 'console-underscore';
+    visibleCursor = !visibleCursor;
+  }, 400);
+
+  return () => {
+    clearInterval(typingInterval);
+    clearInterval(cursorInterval);
+  };
+}
 </script>
 
 <template>
   <div class="wrapper">
-    <p id="head1" class="header text-primary">Awesome designs</p>
-    <p id="head2" class="header text-primary">Just</p>
-    <p id="head3" class="header text-primary">For you</p>
-    <p id="head4" class="header text-primary">
-      simple and awesome all the time
-    </p>
-    <p id="head5" class="header text-primary">Welcome to BA designs</p>
+    <div class="console-container">
+        <span id="text" />
+        <div class="console-underscore" id="console">&#95;</div>
+    </div>
     <div class="light x1"></div>
-    <div class="light x2" v-show='$vuetify.display.smAndUp'></div>
+    <div class="light x2" v-show="$vuetify.display.smAndUp"></div>
     <div class="light x3"></div>
-    <div class="light x4" v-show='$vuetify.display.smAndUp'></div>
+    <div class="light x4" v-show="$vuetify.display.smAndUp"></div>
     <div class="light x5"></div>
-    <div class="light x6" v-show='$vuetify.display.smAndUp'></div>
-    <div class="light x7" v-show='$vuetify.display.smAndUp'></div>
+    <div class="light x6" v-show="$vuetify.display.smAndUp"></div>
+    <div class="light x7" v-show="$vuetify.display.smAndUp"></div>
     <div class="light x8"></div>
-    <div class="light x9" v-show='$vuetify.display.smAndUp'></div>
+    <div class="light x9" v-show="$vuetify.display.smAndUp"></div>
   </div>
 </template>
 
 <style scoped>
+.hidden {
+  opacity: 0;
+}
+
+.console-container {
+  font-size: 2em;
+  text-align: left;
+  height: 200px;
+  width: auto;
+  display: block;
+  position: absolute;
+  color: white;
+  top: 20px;
+  //bottom: 0;
+  left: 20px;
+  right: auto;
+  margin: auto;
+}
+
+.console-underscore {
+  display: inline-block;
+  position: relative;
+}
+
 .wrapper {
   position: relative;
   text-align: center;
@@ -132,6 +208,7 @@ definePageMeta({
     opacity: 0;
   }
 }
+
 @-moz-keyframes floatUp {
   0% {
     top: 100vh;
@@ -152,6 +229,7 @@ definePageMeta({
     opacity: 0;
   }
 }
+
 @-o-keyframes floatUp {
   0% {
     top: 100vh;
@@ -172,6 +250,7 @@ definePageMeta({
     opacity: 0;
   }
 }
+
 @keyframes floatUp {
   0% {
     top: 100vh;
@@ -235,84 +314,12 @@ definePageMeta({
   animation-delay: 22s;
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes fadeOut {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-o-keyframes fadeOut {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
   }
 }
 
@@ -328,51 +335,6 @@ definePageMeta({
   }
   100% {
     opacity: 0;
-  }
-}
-
-@-webkit-keyframes finalFade {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes finalFade {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes finalFade {
-  0% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
