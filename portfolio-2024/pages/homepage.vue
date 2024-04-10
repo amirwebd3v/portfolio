@@ -13,57 +13,10 @@ definePageMeta({
 })
 
 
-onMounted(() => {
-  consoleText(['bye', 'A '], 'text');
-})
+const words = ['Hello', 'World', 'from', 'Nuxt', '3']
+useConsoleText({ words, id: 'text', color: '#00ff00' })
 
 
-
-
-function consoleText(words: string[], id: string, color: string = '#fff'): () => void {
-  const consoleCursor = document.getElementById('consoleCursor');
-  const target = document.getElementById(id);
-
-  if (!consoleCursor || !target) {
-    throw new Error('Console or target element not found');
-  }
-
-  target.style.color = color;
-
-  let visibleCursor = true;
-  let letterIndex = 0;
-  let currentWordIndex = 0;
-  let isWaiting = false;
-
-  const typingInterval = setInterval(() => {
-    if (words[currentWordIndex] && letterIndex === words[currentWordIndex].length && !isWaiting) {
-      isWaiting = true;
-      if (words.length > 1) {
-        target.innerHTML += '<br>';
-      }
-      setTimeout(() => {
-        words.shift();
-        letterIndex = 0;
-        currentWordIndex = 0;
-        target.style.color = color;
-        isWaiting = false;
-      }, 1000);
-    }  else if (!isWaiting && words[currentWordIndex]) {
-      target.innerHTML += words[currentWordIndex][letterIndex] || '';
-      letterIndex += 1;
-    }
-  }, 120);
-
-  const cursorInterval = setInterval(() => {
-    consoleCursor.className = visibleCursor ? 'console-underscore hidden' : 'console-underscore';
-    visibleCursor = !visibleCursor;
-  }, 400);
-
-  return () => {
-    clearInterval(typingInterval);
-    clearInterval(cursorInterval);
-  };
-}
 </script>
 
 <template>
