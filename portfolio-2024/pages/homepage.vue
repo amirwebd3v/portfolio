@@ -14,17 +14,17 @@ definePageMeta({
 
 
 onMounted(() => {
-  consoleText(['bye', 'A freelance software engineer with.'], 'text');
+  consoleText(['bye', 'A '], 'text');
 })
 
 
 
 
-function consoleText(words: string[], id: string, color: string = '#fff') : () => void {
-  const console = document.getElementById('console');
+function consoleText(words: string[], id: string, color: string = '#fff'): () => void {
+  const consoleCursor = document.getElementById('consoleCursor');
   const target = document.getElementById(id);
 
-  if (!console || !target) {
+  if (!consoleCursor || !target) {
     throw new Error('Console or target element not found');
   }
 
@@ -36,7 +36,7 @@ function consoleText(words: string[], id: string, color: string = '#fff') : () =
   let isWaiting = false;
 
   const typingInterval = setInterval(() => {
-    if (letterIndex === words[currentWordIndex].length && !isWaiting) {
+    if (words[currentWordIndex] && letterIndex === words[currentWordIndex].length && !isWaiting) {
       isWaiting = true;
       if (words.length > 1) {
         target.innerHTML += '<br>';
@@ -48,16 +48,14 @@ function consoleText(words: string[], id: string, color: string = '#fff') : () =
         target.style.color = color;
         isWaiting = false;
       }, 1000);
-    } else if (!isWaiting) {
-      target.innerHTML += words[currentWordIndex][letterIndex];
+    }  else if (!isWaiting && words[currentWordIndex]) {
+      target.innerHTML += words[currentWordIndex][letterIndex] || '';
       letterIndex += 1;
     }
   }, 120);
 
   const cursorInterval = setInterval(() => {
-    console.className = visibleCursor
-      ? 'console-underscore hidden'
-      : 'console-underscore';
+    consoleCursor.className = visibleCursor ? 'console-underscore hidden' : 'console-underscore';
     visibleCursor = !visibleCursor;
   }, 400);
 
@@ -72,8 +70,9 @@ function consoleText(words: string[], id: string, color: string = '#fff') : () =
   <div class="wrapper">
     <div class="console-container">
         <span id="text" />
-        <div class="console-underscore" id="console">&#95;</div>
+        <div class="console-underscore" id="consoleCursor">&#95;</div>
     </div>
+
     <div class="light x1"></div>
     <div class="light x2" v-show="$vuetify.display.smAndUp"></div>
     <div class="light x3"></div>
