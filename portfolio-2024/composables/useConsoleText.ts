@@ -1,62 +1,53 @@
-import { ref, onMounted, onUnmounted } from 'vue'
-
-interface ConsoleTextOptions {
-  words: string[]
-  id: string
-  color?: string
+interface ConsoleText {
+  id: string;
+  words: string;
+  order?: number;
 }
 
-export const useConsoleText = ({ words, id, color = '#fff' }: ConsoleTextOptions) => {
-  const consoleCursor = ref<HTMLElement | null>(null)
-  const target = ref<HTMLElement | null>(null)
+export const useConsoleText = async ({ texts, cursorId = 'consoleCursor' }: { texts: ConsoleText[], cursorId?: string }) => {
+  const consoleCursor = ref<HTMLElement | null>(null);
+  const typingSpeed = ref(150); // Adjust typing speed here
 
-  onMounted(() => {
-    consoleCursor.value = document.getElementById('consoleCursor')
-    target.value = document.getElementById(id)
-
-    if (!consoleCursor.value || !target.value) {
-      throw new Error('Console or target element not found')
-    }
-
-    target.value.style.color = color
-
-    let visibleCursor = true
-    let letterIndex = 0
-    let currentWordIndex = 0
-    let isWaiting = false
-
-    const typingInterval = setInterval(() => {
-      if (words[currentWordIndex] && letterIndex === words[currentWordIndex].length && !isWaiting) {
-        isWaiting = true
-        if (words.length > 1) {
-          target.value!.innerHTML += '<br>'
-        }
-        setTimeout(() => {
-          words.shift()
-          letterIndex = 0
-          currentWordIndex = 0
-          target.value!.style.color = color
-          isWaiting = false
-        }, 1000)
-      } else if (!isWaiting && words[currentWordIndex]) {
-        target.value!.innerHTML += words[currentWordIndex][letterIndex] || ''
-        letterIndex += 1
-      }
-    }, 120)
-
+  await onMounted(async () => {
     const cursorInterval = setInterval(() => {
-      consoleCursor.value!.className = visibleCursor ? 'console-underscore hidden' : 'console-underscore'
-      visibleCursor = !visibleCursor
-    }, 400)
+      consoleCursor.value?.classList.toggle('hidden'); // Use optional chaining
+    }, 400);
 
-    onUnmounted(() => {
-      clearInterval(typingInterval)
-      clearInterval(cursorInterval)
-    })
+    onUnmounted(() => clearInterval(cursorInterval));
 
-    return () => {
-      clearInterval(typingInterval)
-      clearInterval(cursorInterval)
+    consoleCursor.value = document.getElementById(cursorId);
+    if (!consoleCursor.value) {
+      throw new Error('Console cursor element not found');
     }
-  })
-}
+    consoleCursor.value.classList.add('console-underscore', 'hidden');
+
+    const sortedTexts = texts.sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+
+    let currentTextIndex = 0;
+    let isWaiting = false;
+
+    const typeText = async (textElement: HTMLElement, text: string) => {
+      for (const char of text) {
+        await new Promise((resolve) => setTimeout(resolve, typingSpeed.value));
+        textElement.textContent += char;
+      }
+
+      if (currentTextIndex < sortedTexts.length - 1) {
+        textElement.innerHTML += '<br>';
+      }
+      currentTextIndex++;
+      isWaiting = true;
+      await new Promise((resolve) => setTimeout(resolve, 1000)); // Adjust pause between texts here
+      isWaiting = false;
+    };
+
+    if (sortedTexts.length > 0) {
+      for (const { id, words } of sortedTexts) {
+        const target = document.getElementById(id);
+        if (target) {
+          await typeText(target, words);
+        }
+      }
+    }
+  });
+};

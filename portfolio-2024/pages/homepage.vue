@@ -13,8 +13,13 @@ definePageMeta({
 })
 
 
-const words = ['Hello', 'World', 'from', 'Nuxt', '3']
-useConsoleText({ words, id: 'text', color: '#00ff00' })
+
+const texts = [
+  { id: 'text1', words: 'Hi', order: 1 },
+  { id: 'text2', words: 'I am',  order: 2 },
+  { id: 'text3', words: 'Nice', order: 3 },
+]
+useConsoleText({ texts })
 
 
 </script>
@@ -22,10 +27,11 @@ useConsoleText({ words, id: 'text', color: '#00ff00' })
 <template>
   <div class="wrapper">
     <div class="console-container">
-        <span id="text" />
+        <span id="text1" style="color: #248fe4; font-size: 65px; font-weight: bold;"/>
+        <span id="text2" />
+        <span id="text3" />
         <div class="console-underscore" id="consoleCursor">&#95;</div>
     </div>
-
     <div class="light x1"></div>
     <div class="light x2" v-show="$vuetify.display.smAndUp"></div>
     <div class="light x3"></div>
@@ -140,69 +146,6 @@ useConsoleText({ words, id: 'text', color: '#00ff00' })
   left: 85%;
 }
 
-@-webkit-keyframes floatUp {
-  0% {
-    top: 100vh;
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    top: 0;
-    opacity: 0.8;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    top: -100vh;
-    opacity: 0;
-  }
-}
-
-@-moz-keyframes floatUp {
-  0% {
-    top: 100vh;
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    top: 0;
-    opacity: 0.8;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    top: -100vh;
-    opacity: 0;
-  }
-}
-
-@-o-keyframes floatUp {
-  0% {
-    top: 100vh;
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    top: 0;
-    opacity: 0.8;
-  }
-  75% {
-    opacity: 1;
-  }
-  100% {
-    top: -100vh;
-    opacity: 0;
-  }
-}
-
 @keyframes floatUp {
   0% {
     top: 100vh;
@@ -224,47 +167,6 @@ useConsoleText({ words, id: 'text', color: '#00ff00' })
   }
 }
 
-.header {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-weight: 500;
-  font-size: 2em;
-}
-
-#head1,
-#head2,
-#head3,
-#head4,
-#head5 {
-  opacity: 0;
-}
-
-#head1 {
-  animation: fadeOut 1 5s ease-in;
-}
-
-#head2 {
-  animation: fadeOut 1 5s ease-in;
-  animation-delay: 6s;
-}
-
-#head3 {
-  animation: fadeOut 1 5s ease-in;
-  animation-delay: 12s;
-}
-
-#head4 {
-  animation: fadeOut 1 5s ease-in;
-  animation-delay: 17s;
-}
-
-#head5 {
-  animation: finalFade 1 5s ease-in;
-  animation-fill-mode: forwards;
-  animation-delay: 22s;
-}
 
 @keyframes fadeIn {
   from {
