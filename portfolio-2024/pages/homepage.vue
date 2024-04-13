@@ -14,13 +14,19 @@ definePageMeta({
 
 
 
+// const texts = ref([
+//   { id: 'text1', words: 'Hi, I\'m Amir.', order: 0 },
+//   { id: 'text2', words: 'A software engineer with 3 years of experience',  order: 1 },
+//   { id: 'text3', words: 'in front-end and back-end web development.', order: 2 },
+// ])
+
 const texts = ref([
-  { id: 'text1', words: 'Hi, I\'m Amir.', order: 0 },
-  { id: 'text2', words: 'A software engineer with 3 years of experience',  order: 1 },
-  { id: 'text3', words: 'in front-end and back-end web development.', order: 2 },
+  { id: 'text1', words: 'H', order: 0 },
+  { id: 'text2', words: 'A ',  order: 1 },
+  { id: 'text3', words: 'i', order: 2 },
 ])
 
-  useConsoleText(texts.value)
+  useConsoleText(texts.value,'btnGroup' )
 
 
 
@@ -31,12 +37,19 @@ const texts = ref([
 <template>
   <div class="wrapper">
     <div class="console-container">
+
         <span id="text1" class="text-primary" style="font-size: 65px; font-weight: bold;"/>
         <span id="text2" style="font-size: 32px;"/>
         <span id="text3" style="font-size: 32px;"/>
         <div class="console-underscore" id="consoleCursor"
              style="font-size: 32px;">&#95;</div>
+
+      <v-sheet class="d-flex bg-transparent mt-16 d-none" id="btnGroup">
+        <v-btn class="mr-5" variant="tonal" width="100" rounded="md" elevation="2">Skills</v-btn>
+        <v-btn class="mr-5" variant="tonal" width="100" rounded="md" elevation="2">Portfolio</v-btn>
+      </v-sheet>
     </div>
+
     <div class="light x1"></div>
     <div class="light x2" v-show="$vuetify.display.smAndUp"></div>
     <div class="light x3"></div>
@@ -52,19 +65,44 @@ const texts = ref([
 <style scoped>
 @media (max-width: 767px) {
   [id="text1"] {
-    font-size: 45px;
+    font-size: 45px !important;
   }
   [id="text2"], [id="text3"], [id="consoleCursor"] {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
+  }
+
+  .console-container {
+    margin:200px 50px !important;
   }
 }
 
 @media (min-width: 768px) {
   [id="text1"] {
-    font-size: 65px;
+    font-size: 65px !important;
   }
   [id="text2"], [id="text3"], [id="consoleCursor"] {
-    font-size: 32px;
+    font-size: 32px !important;
+  }
+
+
+}
+.fade-in-btnGroup {
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  animation-delay: 1.5s;
+  animation-name: fadeInLeft;
+}
+
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 

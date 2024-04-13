@@ -4,9 +4,13 @@ interface ConsoleText {
   order?: number
 }
 
-export const useConsoleText = (texts: ConsoleText[]) => {
+
+
+
+export const useConsoleText = (texts: ConsoleText[],btnGroup : string) => {
   const consoleCursor = ref<HTMLElement | null>(null)
   const target = ref<HTMLElement | null>(null)
+  const btnDisplay = ref<HTMLElement | null>(null)
 
   const typingSpeed = ref(120) // Adjust typing speed here
   let cursorInterval: ReturnType<typeof setInterval> | null = null
@@ -15,9 +19,13 @@ export const useConsoleText = (texts: ConsoleText[]) => {
   const sortedTexts = ref<ConsoleText[] | null>(null)
 
 
-
   sortedTexts.value = texts.sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
 
+
+  const showBtnGroup = () => {
+    btnDisplay.value = document.getElementById('btnGroup')
+    btnDisplay.value!.classList.replace('d-none','fade-in-btnGroup')
+  }
 
 
   const startCursor = () => {
@@ -35,13 +43,14 @@ export const useConsoleText = (texts: ConsoleText[]) => {
 
   }
 
-  watchEffect(()=>{
-    console.log('=====================')
+  // watchEffect(()=>{
+  //   console.log('=====================')
+  //
+  //   console.log('target',target.value)
+  //
+  //   console.log('st',sortedTexts.value!.map((i) => i.id)[currentTextIndex.value])
+  // })
 
-    console.log('target',target.value)
-
-    console.log('st',sortedTexts.value!.map((i) => i.id)[currentTextIndex.value])
-  })
   const startAnimation = async () => {
 
 
@@ -89,6 +98,7 @@ export const useConsoleText = (texts: ConsoleText[]) => {
       }
     }
     isAnimating.value = false
+    await showBtnGroup()
   }
 
   onMounted(async () => {
