@@ -14,12 +14,16 @@ definePageMeta({
 
 
 
-const texts = [
-  { id: 'text1', words: 'Hi', order: 1 },
-  { id: 'text2', words: 'I am',  order: 2 },
-  { id: 'text3', words: 'Nice', order: 3 },
-]
-useConsoleText({ texts })
+const texts = ref([
+  { id: 'text1', words: 'Hi, I\'m Amir.', order: 0 },
+  { id: 'text2', words: 'A software engineer with 3 years of experience',  order: 1 },
+  { id: 'text3', words: 'in front-end and back-end web development.', order: 2 },
+])
+
+  useConsoleText(texts.value)
+
+
+
 
 
 </script>
@@ -27,10 +31,11 @@ useConsoleText({ texts })
 <template>
   <div class="wrapper">
     <div class="console-container">
-        <span id="text1" style="color: #248fe4; font-size: 65px; font-weight: bold;"/>
-        <span id="text2" />
-        <span id="text3" />
-        <div class="console-underscore" id="consoleCursor">&#95;</div>
+        <span id="text1" class="text-primary" style="font-size: 65px; font-weight: bold;"/>
+        <span id="text2" style="font-size: 32px;"/>
+        <span id="text3" style="font-size: 32px;"/>
+        <div class="console-underscore" id="consoleCursor"
+             style="font-size: 32px;">&#95;</div>
     </div>
     <div class="light x1"></div>
     <div class="light x2" v-show="$vuetify.display.smAndUp"></div>
@@ -45,23 +50,37 @@ useConsoleText({ texts })
 </template>
 
 <style scoped>
+@media (max-width: 767px) {
+  [id="text1"] {
+    font-size: 45px;
+  }
+  [id="text2"], [id="text3"], [id="consoleCursor"] {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  [id="text1"] {
+    font-size: 65px;
+  }
+  [id="text2"], [id="text3"], [id="consoleCursor"] {
+    font-size: 32px;
+  }
+}
+
+
 .hidden {
   opacity: 0;
 }
 
 .console-container {
-  font-size: 2em;
-  text-align: left;
-  height: 200px;
-  width: auto;
-  display: block;
-  position: absolute;
-  color: white;
-  top: 20px;
-  //bottom: 0;
-  left: 20px;
-  right: auto;
-  margin: auto;
+  text-justify: inter-character;
+  text-align:left;
+  height:200px;
+  width:auto;
+  display:block;
+  position:absolute;
+  margin:200px 85px;
 }
 
 .console-underscore {

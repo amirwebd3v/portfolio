@@ -1,53 +1,109 @@
 interface ConsoleText {
-  id: string;
-  words: string;
-  order?: number;
+  id: string
+  words: string
+  order?: number
 }
 
-export const useConsoleText = async ({ texts, cursorId = 'consoleCursor' }: { texts: ConsoleText[], cursorId?: string }) => {
-  const consoleCursor = ref<HTMLElement | null>(null);
-  const typingSpeed = ref(150); // Adjust typing speed here
+export const useConsoleText = (texts: ConsoleText[]) => {
+  const consoleCursor = ref<HTMLElement | null>(null)
+  const target = ref<HTMLElement | null>(null)
 
-  await onMounted(async () => {
-    const cursorInterval = setInterval(() => {
-      consoleCursor.value?.classList.toggle('hidden'); // Use optional chaining
-    }, 400);
+  const typingSpeed = ref(120) // Adjust typing speed here
+  let cursorInterval: ReturnType<typeof setInterval> | null = null
+  const currentTextIndex = ref(0)
+  const isAnimating = ref(false)
+  const sortedTexts = ref<ConsoleText[] | null>(null)
 
-    onUnmounted(() => clearInterval(cursorInterval));
 
-    consoleCursor.value = document.getElementById(cursorId);
-    if (!consoleCursor.value) {
-      throw new Error('Console cursor element not found');
+
+  sortedTexts.value = texts.sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+
+
+
+  const startCursor = () => {
+    cursorInterval = setInterval(() => {
+      consoleCursor.value?.classList.toggle('hidden')
+    }, 400)
+  }
+
+  const stopCursor = async () => {
+    if (cursorInterval) {
+      clearInterval(cursorInterval)
+      cursorInterval = null
     }
-    consoleCursor.value.classList.add('console-underscore', 'hidden');
 
-    const sortedTexts = texts.sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
 
-    let currentTextIndex = 0;
-    let isWaiting = false;
+  }
 
-    const typeText = async (textElement: HTMLElement, text: string) => {
-      for (const char of text) {
-        await new Promise((resolve) => setTimeout(resolve, typingSpeed.value));
-        textElement.textContent += char;
+  watchEffect(()=>{
+    console.log('=====================')
+
+    console.log('target',target.value)
+
+    console.log('st',sortedTexts.value!.map((i) => i.id)[currentTextIndex.value])
+  })
+  const startAnimation = async () => {
+
+
+    for (
+      currentTextIndex.value=0;
+      currentTextIndex.value < texts.length;
+      currentTextIndex.value++
+    ) {
+      console.log(currentTextIndex.value)
+
+
+      target.value = document.getElementById(
+        sortedTexts.value!.map((i) => i.id)[currentTextIndex.value],
+      )
+
+
+      if (!isAnimating.value) {
+        if (target.value) {
+          target.value.innerHTML = '';
+        }
+       break;
       }
 
-      if (currentTextIndex < sortedTexts.length - 1) {
-        textElement.innerHTML += '<br>';
-      }
-      currentTextIndex++;
-      isWaiting = true;
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Adjust pause between texts here
-      isWaiting = false;
-    };
 
-    if (sortedTexts.length > 0) {
-      for (const { id, words } of sortedTexts) {
-        const target = document.getElementById(id);
-        if (target) {
-          await typeText(target, words);
+
+
+
+      if (target.value) {
+
+
+
+        await new Promise((resolve) => setTimeout(resolve, 1500)) // Adjust pause between texts here
+
+        for (const char of sortedTexts.value!.map((w) => w.words)[currentTextIndex.value]) {
+
+          await new Promise((resolve) => setTimeout(resolve, typingSpeed.value))
+
+          target.value.textContent += char
+
+        }
+
+        if (currentTextIndex.value < sortedTexts.value!.length - 1) {
+          target.value.innerHTML += '<br>'
         }
       }
     }
-  });
-};
+    isAnimating.value = false
+  }
+
+  onMounted(async () => {
+    consoleCursor.value = document.getElementById('consoleCursor')
+    consoleCursor.value!.classList.add('console-underscore', 'hidden')
+    await startCursor()
+    isAnimating.value = true
+    await startAnimation()
+  })
+
+  onUnmounted(async () => {
+    isAnimating.value = false
+    await stopCursor()
+  })
+}
+
+
+//Todo: fix the clearing issue
