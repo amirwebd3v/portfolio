@@ -48,18 +48,9 @@ nextTick(() => {
         </v-list-item>
       </v-list>
     </template>
-    <v-list nav density="compact" v-if="drawerState">
-      <p class="text-justify mb-2">
-        As a <span class="text-primary">talented</span>
-        web developer with a passion for creating
-        <span class="text-primary">innovative</span>
-        solutions.With a Bachelor of Science in
-        <span class="text-primary">Software Engineering</span>, I bring a wealth
-        of knowledge and <span class="text-primary">expertise</span> to my work.
-      </p>
-    </v-list>
 
-    <v-list>
+
+    <v-list class="mt-10">
       <AppDrawerItem v-for="route in routes" :key="route.name" :item="route" />
     </v-list>
 

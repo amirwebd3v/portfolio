@@ -154,3 +154,31 @@ html {
 .d-none {
   display: none !important;
 }
+
+
+.font-16 {
+  font-size: 16px !important;
+}
+
+.font-18 {
+  font-size: 18px !important;
+}
+
+.font-20 {
+  font-size: 20px !important;
+}
+
+
+.text-line-height {
+  line-height: 1.8 !important;
+}
+
+.font-weight-thin {
+  font-weight: 100 !important;
+}
+
+.font-weight-bold {
+  font-weight: 600 !important;
+}
+
+

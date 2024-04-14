@@ -26,7 +26,8 @@ const texts = ref([
   { id: 'text3', words: 'i', order: 2 },
 ])
 
-  useConsoleText(texts.value,'btnGroup' )
+
+useConsoleText(texts.value,'btnGroup' )
 
 
 
@@ -44,21 +45,20 @@ const texts = ref([
         <div class="console-underscore" id="consoleCursor"
              style="font-size: 32px;">&#95;</div>
 
-      <v-sheet class="d-flex bg-transparent mt-16 d-none" id="btnGroup">
+      <v-sheet class="d-flex bg-transparent mt-16 pt-16 d-none" id="btnGroup">
         <v-btn class="mr-5" variant="tonal" width="100" rounded="md" elevation="2">Skills</v-btn>
         <v-btn class="mr-5" variant="tonal" width="100" rounded="md" elevation="2">Portfolio</v-btn>
       </v-sheet>
     </div>
-
-    <div class="light x1"></div>
-    <div class="light x2" v-show="$vuetify.display.smAndUp"></div>
-    <div class="light x3"></div>
-    <div class="light x4" v-show="$vuetify.display.smAndUp"></div>
-    <div class="light x5"></div>
-    <div class="light x6" v-show="$vuetify.display.smAndUp"></div>
-    <div class="light x7" v-show="$vuetify.display.smAndUp"></div>
-    <div class="light x8"></div>
-    <div class="light x9" v-show="$vuetify.display.smAndUp"></div>
+    <div class="light x1"/>
+    <div class="light x2" v-show="$vuetify.display.smAndUp"/>
+    <div class="light x3"/>
+    <div class="light x4" v-show="$vuetify.display.smAndUp"/>
+    <div class="light x5"/>
+    <div class="light x6" v-show="$vuetify.display.smAndUp"/>
+    <div class="light x7" v-show="$vuetify.display.smAndUp"/>
+    <div class="light x8"/>
+    <div class="light x9" v-show="$vuetify.display.smAndUp"/>
   </div>
 </template>
 
