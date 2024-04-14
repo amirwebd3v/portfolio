@@ -5,6 +5,10 @@ html {
   }
 }
 
+.v-card-text {
+  line-height: 1.8 !important;
+}
+
 .v-card--variant-elevated:not(.v-card--flat) {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 }
@@ -169,9 +173,7 @@ html {
 }
 
 
-.text-line-height {
-  line-height: 1.8 !important;
-}
+
 
 .font-weight-thin {
   font-weight: 100 !important;
