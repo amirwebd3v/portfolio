@@ -9,8 +9,12 @@ definePageMeta({
 <template>
   <v-col cols="12">
     <v-card height="auto" max-width="1000">
+
+      <v-card-title class="pt-10">
+        <h1>SKILLS</h1>
+      </v-card-title>
       <!-- Introduction Section -->
-      <div>
+      <div class="pt-10">
         <v-card-text class="font-20 font-weight-bold">
           A
           <strong class="text-primary">full-stack software engineer</strong>

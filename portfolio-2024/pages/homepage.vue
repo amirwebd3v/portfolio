@@ -8,7 +8,7 @@
 // }
 definePageMeta({
   icon: 'mdi-home',
-  title: 'Homepage',
+  title: 'Home',
   drawerIndex: 0,
 })
 

@@ -9,8 +9,14 @@ definePageMeta({
 <template>
   <v-col cols="12">
     <v-card height="auto" max-width="1000" class="pb-10">
-      <!-- Introduction Section -->
-      <div>
+
+
+      <v-card-title class="pt-10">
+        <h1>CANTACT ME</h1>
+      </v-card-title>
+
+
+      <div class="pt-10">
         <v-card-text class="font-20 font-weight-bold">
           I am currently
           <strong class="text-primary">available</strong>
@@ -25,7 +31,7 @@ definePageMeta({
           </v-sheet>
 
           <v-sheet class="order-2 px-2 mx-2">
-            <v-icon icon="mdi-email-outline" size="small" />
+            <v-icon class="mx-1" icon="mdi-email-outline" size="small" />
             <nuxt-link to="/homepage" class="text-decoration-none text-primary">
               amirhidevs@gmail.com
             </nuxt-link>
@@ -38,7 +44,7 @@ definePageMeta({
           </v-sheet>
 
           <v-sheet class="order-2 px-2 mx-2">
-            <v-icon icon="mdi-linkedin" size="small" />
+            <v-icon class="mr-1" icon="mdi-linkedin" size="small" />
             <nuxt-link to="/homepage" class="text-decoration-none text-primary">
               EyZi
             </nuxt-link>
@@ -51,7 +57,7 @@ definePageMeta({
           </v-sheet>
 
           <v-sheet class="order-2 px-2 mx-2">
-            <v-icon icon="mdi-instagram" size="small" />
+            <v-icon class="mr-1" icon="mdi-instagram" size="small" />
             <nuxt-link to="/homepage" class="text-decoration-none text-primary">
               EyZi
             </nuxt-link>
@@ -64,7 +70,7 @@ definePageMeta({
           </v-sheet>
 
           <v-sheet class="order-2 px-2 mx-2">
-            <v-icon icon="mdi-github" size="small" />
+            <v-icon class="mr-1" icon="mdi-github" size="small" />
             <nuxt-link to="/homepage" class="text-decoration-none text-primary">
               EyZi
             </nuxt-link>
