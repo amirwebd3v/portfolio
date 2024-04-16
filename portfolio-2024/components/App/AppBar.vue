@@ -29,7 +29,7 @@ const { loggedIn, clear, user } = useUserSession()
 <template>
   <v-app-bar flat v-if="route.name === 'homepage' ? $vuetify.display.smAndDown : true">
     <v-app-bar-nav-icon @click="drawer = !drawer" />
-    <v-breadcrumbs :items="breadcrumbs" />
+    <v-breadcrumbs />
     <v-spacer />
     <div id="app-bar" />
     <client-only>

@@ -15,7 +15,7 @@ definePageMeta({
       </v-card-title>
       <!-- Introduction Section -->
       <div class="pt-10">
-        <v-card-text class="font-20 font-weight-bold">
+        <v-card-text class="font-20">
           A
           <strong class="text-primary">full-stack software engineer</strong>
           with over
@@ -61,9 +61,7 @@ definePageMeta({
           <nuxt-link
             to="/homepage"
             class="text-decoration-none text-primary"
-          >
-            portfolio.
-          </nuxt-link>
+          >portfolio</nuxt-link>.
         </v-card-text>
       </div>
       <v-divider class="border-opacity-50 my-8" inset role="presentation" />
