@@ -29,11 +29,8 @@ definePageMeta({
 
         <v-divider />
 
-        <v-card-title class="pt-10">
-          <h2 class="font-weight-thin">Dentistry</h2>
-        </v-card-title>
 
-        <v-row>
+        <v-row class="pt-5">
           <v-col
             class="flex-grow-1 flex-shrink-1 order-1"
             cols="auto"
@@ -41,6 +38,11 @@ definePageMeta({
             sm="12"
             style="min-width: auto; max-width: 100%"
           >
+            <v-card-title >
+              <h2 class="font-weight-thin">Dentistry</h2>
+            </v-card-title>
+
+
             <v-card-text class="font-weight-thin font-18">
               Rely on dentists who prioritize their patients' comfort.
             </v-card-text>
@@ -80,7 +82,7 @@ definePageMeta({
           >
             <v-card-text>
               <v-img
-                rounded
+                rounded="lg"
                 src="https://jtom.me/generated/images/portfolio/tripsomnia/marketplace-home-cropped-800x568-1ce742.1d508d53.png"
               ></v-img>
             </v-card-text>
