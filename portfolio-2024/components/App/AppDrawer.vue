@@ -52,22 +52,22 @@ nextTick(() => {
 
     <v-list class="mt-10">
       <AppDrawerItem v-for="route in routes" :key="route.name" :item="route" />
+
+      <v-list-item v-if="drawerState"
+                   class="mt-16 pt-16">
+        <span class="text-primary" style="font-size: 12px;">
+          GET IN TOUCH
+        </span>
+        <div class="d-flex flex-row mt-5">
+          <a href="#" class="text-decoration-none text-white"> <v-icon icon="mdi-email" size="xx-large"/></a>
+          <a href="#" class="text-decoration-none text-white"> <v-icon icon="mdi-linkedin" size="xx-large"/></a>
+          <a href="#" class="text-decoration-none text-white"> <v-icon icon="mdi-github" size="xx-large"/></a>
+          <a href="#" class="text-decoration-none text-white"> <v-icon icon="mdi-instagram" size="xx-large"/></a>
+        </div>
+
+      </v-list-item>
+
     </v-list>
 
-    <v-spacer />
-    <template #append v-if="drawerState">
-      <v-list-item class="drawer-footer px-0 d-flex flex-column justify-center">
-        <div class="text-primary" style="white-space: nowrap; font-size: 15px">
-          <span style="font-size: 21px">&#9824;</span> Powered By
-          <a
-            href="https://github.com/amirhidevs"
-            class="pt-6 pt-md-0 text-decoration-none text-white"
-            target="_blank"
-            style="font-size: 14px"
-            >Amirhossein Zahmatmand</a
-          >
-        </div>
-      </v-list-item>
-    </template>
   </v-navigation-drawer>
 </template>
