@@ -35,13 +35,6 @@ html {
   text-transform: initial !important;
 }
 
-.v-data-table-footer {
-  .v-field__input {
-    min-height: 36px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
 
 .v-tab {
   border-radius: 0 !important;
@@ -66,13 +59,13 @@ html {
 /* https://github.com/vuetifyjs/vuetify/issues/15202 */
 .v-app-bar,
 .v-footer {
-  left: 368px;
-  width: calc(100% - 368px);
+  left: 468px;
+  width: calc(100% - 468px);
 }
 
 
 .v-navigation-drawer {
-  width: 368px;
+  width: 468px;
   transition:
     box-shadow,
     transform,

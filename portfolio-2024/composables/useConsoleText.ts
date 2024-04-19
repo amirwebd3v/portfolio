@@ -59,7 +59,7 @@ export const useConsoleText = (texts: ConsoleText[],btnGroup : string) => {
       currentTextIndex.value < texts.length;
       currentTextIndex.value++
     ) {
-      console.log(currentTextIndex.value)
+      // console.log(currentTextIndex.value)
 
 
       target.value = document.getElementById(

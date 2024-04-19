@@ -12,7 +12,7 @@ const title = computed(() => {
 })
 useHead({
   title,
-  titleTemplate: (t) => (t ? `${t} | AmirZm` : 'Amirhossein'),
+  titleTemplate: (t) => (t ? `AmirZm | ${t}` : 'Amirhossein'),
   htmlAttrs: { lang: 'en' },
   link: [{ rel: 'icon', href: '/favicon.ico' }],
 })
@@ -23,13 +23,20 @@ useSeoMeta({
   twitterImage: '/social-image.png',
   twitterCard: 'summary_large_image',
 })
+
 </script>
 
 <template>
   <v-app>
+
+    <AppBar />
+
     <AppDrawer />
-    <AppBar/>
-    <v-main :style="route.name !== 'homepage' ? 'margin-top: 64px;' : 'margin-top: 0'">
+
+
+
+
+    <v-main >
       <NuxtPage />
     </v-main>
     <AppFooter/>
@@ -41,7 +48,7 @@ useSeoMeta({
   padding-top: 0;
   padding-bottom: 0;
   margin-bottom: 0;
-  height: calc(100vh - 64px - 32px);
+  margin-top: 0;
   overflow-y: auto;
   transition-property: padding;
 }

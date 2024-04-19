@@ -2,7 +2,9 @@
 import { mergeProps } from 'vue'
 
 const theme = useTheme()
-const drawer = useState('drawer')
+const drawer = await useState('drawer')
+const drawerLocation = await useState('drawerLocation')
+
 const route = useRoute()
 const breadcrumbs = computed(() => {
   return route!.matched
@@ -27,23 +29,21 @@ const { loggedIn, clear, user } = useUserSession()
 </script>
 
 <template>
-  <v-app-bar flat v-if="route.name === 'homepage' ? $vuetify.display.smAndDown : true">
-    <v-app-bar-nav-icon @click="drawer = !drawer" />
-    <v-breadcrumbs />
-    <v-spacer />
-    <div id="app-bar" />
+  <v-app-bar flat v-if="drawerLocation === 'top'">
+    <div id="app-bar"/>
     <client-only>
-        <v-switch
-          :model-value="isDark"
-          color=""
-          hide-details
-          density="compact"
-          inset
-          false-icon="mdi-white-balance-sunny"
-          true-icon="mdi-weather-night"
-          style="opacity: 0.8"
-          @update:model-value="toggleDark"
-        />
+      <v-switch
+        :model-value="isDark"
+        color=""
+        hide-details
+        density="compact"
+        inset
+        class="pl-5"
+        false-icon="mdi-white-balance-sunny"
+        true-icon="mdi-weather-night"
+        style="opacity: 0.8"
+        @update:model-value="toggleDark"
+      />
     </client-only>
     <v-menu location="bottom">
       <template #activator="{ props: menu }">
@@ -52,11 +52,11 @@ const { loggedIn, clear, user } = useUserSession()
             <v-btn icon large v-bind="mergeProps(menu, tooltip)" class="ml-1">
               <v-icon v-if="!loggedIn" icon="mdi-account-circle" size="36" />
               <v-avatar v-else color="primary" size="36">
-                <v-img :src="`https://github.com/${user!.login}.png`" />
+<!--                <v-img :src="`https://github.com/${user!.login}.png`" />-->
               </v-avatar>
             </v-btn>
           </template>
-          <span>{{ loggedIn ? user!.login : 'User' }}</span>
+<!--          <span>{{ loggedIn ? user!.login : 'User' }}</span>-->
         </v-tooltip>
       </template>
       <v-list>
@@ -74,5 +74,8 @@ const { loggedIn, clear, user } = useUserSession()
         />
       </v-list>
     </v-menu>
+    <v-spacer />
+    <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+    <v-breadcrumbs />
   </v-app-bar>
 </template>
