@@ -33,6 +33,22 @@ const drawer = computed({
   },
 })
 
+watchEffect(() => {
+  console.log(
+    'mobile:',
+    mobile.value,
+    'width:',
+    width.value,
+    'drawerState:',
+    drawerState.value,
+    'drawerLocation:',
+    drawerLocation.value,
+
+  )
+
+  console.log('mm',!(mobile.value || width.value < 1280))
+  console.log('dd',((mobile.value && width.value < 1280) ? 'top' : 'left'))
+})
 
 nextTick(() => {
   drawerLocation.value =  ((mobile.value && width.value < 1280) ? 'top' : 'left')

@@ -33,12 +33,10 @@ useSeoMeta({
 
     <AppDrawer />
 
-
-
-
     <v-main >
       <NuxtPage />
     </v-main>
+
     <AppFooter/>
   </v-app>
 </template>
@@ -51,5 +49,8 @@ useSeoMeta({
   margin-top: 0;
   overflow-y: auto;
   transition-property: padding;
+  @media (max-width: 1279px) {
+    margin-top: 64px!important;
+  }
 }
 </style>
