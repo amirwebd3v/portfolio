@@ -4,11 +4,13 @@ definePageMeta({
   title: 'Portfolio',
   drawerIndex: 2,
 })
+
+usePageShow('portfolio')
 </script>
 
 <template>
   <v-col cols="12">
-    <v-card height="auto" class="pb-10" max-width="1500">
+    <v-card height="auto" class="pb-10 d-none" id="portfolio" max-width="1500">
       <v-card-title class="pt-10">
         <h1>PORTFOLIO</h1>
       </v-card-title>

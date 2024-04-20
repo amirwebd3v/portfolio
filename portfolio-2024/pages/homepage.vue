@@ -30,13 +30,13 @@ const texts = ref([
 useConsoleText(texts.value,'btnGroup' )
 
 
-
+usePageShow('homepage')
 
 
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="wrapper d-none" id="homepage">
     <div class="console-container">
 
         <span id="text1" class="text-primary" style="font-size: 65px; font-weight: bold;"/>
@@ -62,7 +62,7 @@ useConsoleText(texts.value,'btnGroup' )
   </div>
 </template>
 
-<style scoped>
+<style>
 @media (max-width: 767px) {
   [id="text1"] {
     font-size: 45px !important;
@@ -92,6 +92,9 @@ useConsoleText(texts.value,'btnGroup' )
   animation-delay: 1.5s;
   animation-name: fadeInLeft;
 }
+
+
+
 
 
 @keyframes fadeInLeft {

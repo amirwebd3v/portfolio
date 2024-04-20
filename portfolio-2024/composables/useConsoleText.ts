@@ -7,7 +7,7 @@ interface ConsoleText {
 
 
 
-export const useConsoleText = (texts: ConsoleText[],btnGroup : string) => {
+export const useConsoleText = (texts: ConsoleText[],btnGroupId : string) => {
   const consoleCursor = ref<HTMLElement | null>(null)
   const target = ref<HTMLElement | null>(null)
   const btnDisplay = ref<HTMLElement | null>(null)
@@ -23,7 +23,7 @@ export const useConsoleText = (texts: ConsoleText[],btnGroup : string) => {
 
 
   const showBtnGroup = () => {
-    btnDisplay.value = document.getElementById('btnGroup')
+    btnDisplay.value = document.getElementById(btnGroupId)
     btnDisplay.value!.classList.replace('d-none','fade-in-btnGroup')
   }
 

@@ -4,12 +4,13 @@ definePageMeta({
   title: 'Skills',
   drawerIndex: 1,
 })
+
+usePageShow('skills')
 </script>
 
 <template>
   <v-col cols="12">
-    <v-card height="auto" max-width="1000">
-
+    <v-card height="auto" max-width="1000" class="d-none" id="skills">
       <v-card-title class="pt-10">
         <h1>SKILLS</h1>
       </v-card-title>
@@ -22,9 +23,7 @@ definePageMeta({
           <strong class="text-primary">15 years of experience</strong>.
         </v-card-text>
 
-        <v-card-text
-          class="text-justify font-16 font-weight-thin"
-        >
+        <v-card-text class="text-justify font-16 font-weight-thin">
           I have maintained, developed and launched multiple projects from
           scratch, handling the development of their back-end and front-end
           codebases.
@@ -43,9 +42,7 @@ definePageMeta({
         </v-card-text>
 
         <v-card-text>
-          <ul
-            class="ml-7 text-justify font-16 font-weight-thin"
-          >
+          <ul class="ml-7 text-justify font-16 font-weight-thin">
             <li>leading or co-developing their back-ends and front-ends,</li>
             <li>automating the deployment process,</li>
             <li>improving UI/UX design,</li>
@@ -58,10 +55,10 @@ definePageMeta({
 
         <v-card-text class="font-20">
           For examples of my work, check out my
-          <nuxt-link
-            to="/homepage"
-            class="text-decoration-none text-primary"
-          >portfolio</nuxt-link>.
+          <nuxt-link to="/homepage" class="text-decoration-none text-primary"
+            >portfolio
+          </nuxt-link>
+          .
         </v-card-text>
       </div>
       <v-divider class="border-opacity-50 my-8" inset role="presentation" />
@@ -74,9 +71,7 @@ definePageMeta({
           <strong class="text-primary">15 years of experience</strong>.
         </v-card-text>
 
-        <v-card-text
-          class="text-justify font-16 font-weight-thin"
-        >
+        <v-card-text class="text-justify font-16 font-weight-thin">
           I have maintained, developed and launched multiple projects from
           scratch, handling the development of their back-end and front-end
           codebases.
@@ -95,9 +90,7 @@ definePageMeta({
         </v-card-text>
 
         <v-card-text>
-          <ul
-            class="ml-7 text-justify font-16 font-weight-thin"
-          >
+          <ul class="ml-7 text-justify font-16 font-weight-thin">
             <li>leading or co-developing their back-ends and front-ends,</li>
             <li>automating the deployment process,</li>
             <li>improving UI/UX design,</li>
@@ -110,13 +103,14 @@ definePageMeta({
 
         <v-card-text class="font-20">
           For examples of my work, check out my
-          <nuxt-link
-            to="/homepage"
-            class="text-decoration-none text-primary">portfolio</nuxt-link>.
+          <nuxt-link to="/homepage" class="text-decoration-none text-primary"
+            >portfolio
+          </nuxt-link>
+          .
         </v-card-text>
       </div>
       <v-divider class="border-opacity-50 my-8" role="presentation" />
-<!--       Final Section -->
+      <!--       Final Section -->
       <div>
         <v-card-text class="text-justify font-16 font-weight-thin">
           If your initial thought is that I can’t be the best in everything,
@@ -128,11 +122,14 @@ definePageMeta({
           In cases where you already have an existing team but still need some
           help, feel free to
           <nuxt-link to="/homepage" class="text-decoration-none text-primary"
-            >contact me</nuxt-link>.
-          I assure you that I will fit in quickly.
+            >contact me
+          </nuxt-link>
+          . I assure you that I will fit in quickly.
         </v-card-text>
       </div>
     </v-card>
-
   </v-col>
 </template>
+
+
+

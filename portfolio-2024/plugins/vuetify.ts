@@ -33,5 +33,8 @@ export default defineNuxtPlugin((nuxtApp) => {
         dark: { colors: { primary } },
       },
     }
+    vuetifyOptions.display = {
+      mobileBreakpoint : 1280,
+    }
   })
 })

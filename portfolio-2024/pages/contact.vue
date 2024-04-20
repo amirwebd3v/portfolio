@@ -4,11 +4,13 @@ definePageMeta({
   title: 'Contact Me',
   drawerIndex: 3,
 })
+
+usePageShow('contact')
 </script>
 
 <template>
   <v-col cols="12">
-    <v-card height="auto" max-width="1000" class="pb-10">
+    <v-card height="auto" max-width="1000" class="pb-10 d-none" id="contact">
 
 
       <v-card-title class="pt-10">
