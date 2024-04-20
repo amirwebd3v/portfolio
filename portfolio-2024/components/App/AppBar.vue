@@ -2,8 +2,8 @@
 import { mergeProps } from 'vue'
 
 const theme = useTheme()
-const drawer = await useState('drawer')
-const drawerLocation = await useState('drawerLocation')
+const drawer = useState('drawer')
+
 
 const route = useRoute()
 const breadcrumbs = computed(() => {
@@ -29,8 +29,8 @@ const { loggedIn, clear, user } = useUserSession()
 </script>
 
 <template>
-  <v-app-bar flat v-if="drawerLocation === 'top'">
-    <div id="app-bar"/>
+  <v-app-bar flat v-if="$vuetify.display.mobile">
+    <div id="app-bar" />
     <client-only>
       <v-switch
         :model-value="isDark"
@@ -41,7 +41,6 @@ const { loggedIn, clear, user } = useUserSession()
         class="pl-5"
         false-icon="mdi-white-balance-sunny"
         true-icon="mdi-weather-night"
-        style="opacity: 0.8"
         @update:model-value="toggleDark"
       />
     </client-only>
@@ -52,11 +51,11 @@ const { loggedIn, clear, user } = useUserSession()
             <v-btn icon large v-bind="mergeProps(menu, tooltip)" class="ml-1">
               <v-icon v-if="!loggedIn" icon="mdi-account-circle" size="36" />
               <v-avatar v-else color="primary" size="36">
-<!--                <v-img :src="`https://github.com/${user!.login}.png`" />-->
+                <!--                <v-img :src="`https://github.com/${user!.login}.png`" />-->
               </v-avatar>
             </v-btn>
           </template>
-<!--          <span>{{ loggedIn ? user!.login : 'User' }}</span>-->
+          <!--          <span>{{ loggedIn ? user!.login : 'User' }}</span>-->
         </v-tooltip>
       </template>
       <v-list>
@@ -79,3 +78,14 @@ const { loggedIn, clear, user } = useUserSession()
     <v-breadcrumbs />
   </v-app-bar>
 </template>
+
+<style scoped>
+.v-app-bar {
+  @media screen and (min-width: 1280px) {
+    visibility: hidden !important;
+  }
+  @media screen and (max-width: 1279px) {
+    visibility: visible !important;
+  }
+}
+</style>

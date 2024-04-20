@@ -1,11 +1,5 @@
 <script setup lang="ts">
-import { THEME_KEY } from 'vue-echarts'
 
-const theme = useTheme()
-provide(
-  THEME_KEY,
-  computed(() => (theme.current.value.dark ? 'dark' : undefined)),
-)
 const route = useRoute()
 const title = computed(() => {
   return route.meta?.title || route.matched[0].meta?.title || ''
@@ -24,16 +18,19 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 
+
+
 </script>
 
 <template>
   <v-app>
 
-    <AppBar />
+    <AppBar  />
 
-    <AppDrawer />
 
-    <v-main >
+    <AppDrawer/>
+
+    <v-main>
       <NuxtPage />
     </v-main>
 
@@ -41,7 +38,7 @@ useSeoMeta({
   </v-app>
 </template>
 
-<style scoped>
+<style>
 .v-main {
   padding-top: 0;
   padding-bottom: 0;
@@ -50,7 +47,17 @@ useSeoMeta({
   overflow-y: auto;
   transition-property: padding;
   @media (max-width: 1279px) {
-    margin-top: 64px!important;
+  }
+  @media (min-width: 1280px) {
+    --v-layout-left:468px!important;
   }
 }
+
+.fade-in-page-cards {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: .1s;
+  animation-name: fadeInLeft;
+}
+
 </style>

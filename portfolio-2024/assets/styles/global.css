@@ -56,13 +56,6 @@ html {
   height: 100%;
 }
 
-/* https://github.com/vuetifyjs/vuetify/issues/15202 */
-.v-app-bar,
-.v-footer {
-  left: 468px;
-  width: calc(100% - 468px);
-}
-
 
 .v-navigation-drawer {
   width: 468px;
