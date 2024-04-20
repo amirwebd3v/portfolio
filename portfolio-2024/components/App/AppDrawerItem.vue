@@ -20,6 +20,7 @@ const isItem = computed(
 )
 const title = computed(() => props.item?.meta?.title)
 const icon = computed(() => props.item?.meta?.icon)
+const drawer = useState('drawer')
 </script>
 
 <template>
@@ -29,6 +30,7 @@ const icon = computed(() => props.item?.meta?.icon)
     :prepend-icon="icon"
     active-class="text-primary"
     :title="title"
+    @click.stop="$vuetify.display.mobile ? drawer = !drawer : drawer"
   />
   <v-list-group v-else-if="icon" :prepend-icon="icon" color="primary">
     <template #activator="{ props: vProps }">

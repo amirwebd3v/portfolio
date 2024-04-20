@@ -79,13 +79,4 @@ const { loggedIn, clear, user } = useUserSession()
   </v-app-bar>
 </template>
 
-<style scoped>
-.v-app-bar {
-  @media screen and (min-width: 1280px) {
-    visibility: hidden !important;
-  }
-  @media screen and (max-width: 1279px) {
-    visibility: visible !important;
-  }
-}
-</style>
+

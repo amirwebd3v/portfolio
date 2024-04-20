@@ -38,26 +38,4 @@ useSeoMeta({
   </v-app>
 </template>
 
-<style>
-.v-main {
-  padding-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-  overflow-y: auto;
-  transition-property: padding;
-  @media (max-width: 1279px) {
-  }
-  @media (min-width: 1280px) {
-    --v-layout-left:468px!important;
-  }
-}
 
-.fade-in-page-cards {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-delay: .1s;
-  animation-name: fadeInLeft;
-}
-
-</style>

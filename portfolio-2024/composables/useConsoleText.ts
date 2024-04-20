@@ -24,7 +24,7 @@ export const useConsoleText = (texts: ConsoleText[],btnGroupId : string) => {
 
   const showBtnGroup = () => {
     btnDisplay.value = document.getElementById(btnGroupId)
-    btnDisplay.value!.classList.replace('d-none','fade-in-btnGroup')
+    btnDisplay.value?.classList.replace('d-none','fade-in-btnGroup')
   }
 
 

@@ -21,20 +21,6 @@ watch(mobile, (newVal) => {
   drawerLocationState.value = newVal ? 'top' : 'left';
 });
 
-watchEffect(() => {
-  console.log(
-    'mobile:',
-    mobile.value,
-    'width:',
-    width.value,
-    'drawerState:',
-    drawerState.value,
-
-  )
-})
-
-
-
 
 
 
@@ -45,7 +31,7 @@ watchEffect(() => {
     v-model="drawerState"
     width="468"
     :location="drawerLocationState"
-    permanent
+    style="z-index:1004 !important;"
   >
 
     <v-list nav density="compact">
