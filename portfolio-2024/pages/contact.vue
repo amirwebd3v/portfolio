@@ -1,8 +1,8 @@
 <script setup lang="ts">
 definePageMeta({
-  icon: 'mdi-card-account-phone',
+  icon: 'mdi-account-box',
   title: 'Contact Me',
-  drawerIndex: 3,
+  drawerIndex: 4,
 })
 
 usePageShow('contact')
