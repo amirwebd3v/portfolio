@@ -28,19 +28,22 @@ const drawer = useState('drawer')
     v-if="isItem && icon"
     :to="{ name: item?.name || visibleChildren?.[0].name }"
     :prepend-icon="icon"
-    active-class="text-primary"
+    style="opacity: 1!important;"
+    variant="plain"
+    color="primary"
+    :ripple="false"
     :title="title"
     @click.stop="$vuetify.display.mobile ? drawer = !drawer : drawer"
   />
-  <v-list-group v-else-if="icon" :prepend-icon="icon" color="primary">
-    <template #activator="{ props: vProps }">
-      <v-list-item :title="title" v-bind="vProps" />
-    </template>
-    <AppDrawerItem
-      v-for="child in visibleChildren"
-      :key="child.name"
-      :item="child"
-      :level="level + 1"
-    />
-  </v-list-group>
+<!--  <v-list-group v-else-if="icon" :prepend-icon="icon" color="primary">-->
+<!--    <template #activator="{ props: vProps }">-->
+<!--      <v-list-item :title="title" v-bind="vProps" />-->
+<!--    </template>-->
+<!--    <AppDrawerItem-->
+<!--      v-for="child in visibleChildren"-->
+<!--      :key="child.name"-->
+<!--      :item="child"-->
+<!--      :level="level + 1"-->
+<!--    />-->
+<!--  </v-list-group>-->
 </template>
