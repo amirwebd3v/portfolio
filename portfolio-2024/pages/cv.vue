@@ -48,7 +48,7 @@ watchEffect(() => {
 
             <v-divider class="border-opacity-15 links__column" vertical length="86" role="presentation" />
 
-            <v-col cols="auto" class="pl-2 text-primary links__column">
+            <v-col cols="auto" class=" text-primary links__column">
               <h5 class="font-weight-thin ">www.hidevs.com</h5>
               <h5 class="font-weight-thin">www.hidevs.com</h5>
               <h5 class="font-weight-thin">www.hidevs.com </h5>
@@ -61,7 +61,7 @@ watchEffect(() => {
     <!--CV-Section-Start-->
     <div class="mt-8 mb-16">
       <v-row>
-        <h2 class="text-primary section-title font-weight-thin">Skills</h2>
+        <span class="text-primary section-title font-weight-thin">Skills</span>
       </v-row>
 
       <v-row>
@@ -75,8 +75,8 @@ watchEffect(() => {
               class="px-1 mr-3 mb-1 app-name"
             >
               <span
-                class="app-name__float  font-13 font-weight-thin text-white"
-                style="padding-top: 0.16rem !important"
+                class="app-name__float text-primary font-14 font-weight-thin "
+                style="padding-top: 0.15rem !important"
                 >APPTUNE</span
               >
             </v-card>
@@ -88,11 +88,11 @@ watchEffect(() => {
               rounded="md"
               color="white"
               variant="text"
-              class="px-2 border-none"
+              class="px-2 border-none "
             >
               <span
-                class="app-date__float float-right font-13 font-weight-thin text-white text-truncate"
-                style="font-size: 12px !important"
+                class="app-date__float text-primary font-14 font-weight-thin text-truncate"
+                style="padding-top: 0.10rem !important"
                 >Nov 2021 - Sep 2023</span
               >
             </v-card>
@@ -103,7 +103,7 @@ watchEffect(() => {
           </v-col>
 
           <v-col
-            class="section-description my-0 py-0 pr-5 v-col-sm-9"
+            class="section-description my-0 py-0 v-col-sm-9"
             cols="12"
           >
             <div class="text-justify">
@@ -151,6 +151,7 @@ watchEffect(() => {
   .section-title {
     margin-bottom: 15px;
     padding-left: 24%;
+    font-size: 26px;
   }
 
   .app-name {
@@ -162,7 +163,6 @@ watchEffect(() => {
 
   .app-date {
     order: 3;
-
     .app-date__float {
       float: right;
     }
@@ -186,7 +186,7 @@ watchEffect(() => {
 
 @media screen and (max-width: 1000px) {
   .cv-card {
-    padding: 32px 20px;
+    padding: 32px 32px;
     margin: 0 !important;
 
     .app-name {
@@ -197,18 +197,21 @@ watchEffect(() => {
     .bio {
       text-align: center;
     }
-
   }
-
 }
 
 @media screen and (max-width: 767px) {
   .cv-card {
-    padding: 32px 20px;
+    padding: 32px 32px;
     margin: 0 !important;
 
+
+    h2 {
+      font-size: 19px;
+    }
+
     .section-title {
-      padding-left: 0;
+      padding-left: 1%;
     }
 
     .app-name {

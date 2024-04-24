@@ -1,3 +1,8 @@
+*{
+  font-family: "Calibri", sans-serif;
+}
+
+
 html {
   overflow-y: auto;
   &.dark {
@@ -20,7 +25,6 @@ html {
   }
   --v-border-opacity: 0.09 !important;
   --v-theme-background: 243, 243, 243 !important;
-
 }
 
 .v-app-bar .v-navigation-drawer .v-footer {
@@ -141,9 +145,6 @@ html {
 }
 
 
-
-
-
 .text-justify {
   text-align: justify !important;
   text-justify: auto !important;
@@ -160,8 +161,8 @@ html {
 }
 
 
-.font-13 {
-  font-size: 13px !important;
+.font-14 {
+  font-size: 14px !important;
 }
 
 .font-16 {
@@ -177,10 +178,8 @@ html {
 }
 
 
-
-
 .font-weight-thin {
-  font-weight: 100 !important;
+  font-weight: 400 !important;
 }
 
 .font-weight-bold {
