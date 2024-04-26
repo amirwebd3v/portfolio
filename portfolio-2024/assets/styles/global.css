@@ -415,9 +415,7 @@ html {
     font-size: 32px !important;
   }
 
-  .v-card-text ,.v-sheet {
-    font-size: 1.125rem !important;
-  }
+
 }
 
 @media (min-width: 768px) {
