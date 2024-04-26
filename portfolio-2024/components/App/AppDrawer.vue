@@ -46,8 +46,8 @@ watch(mobile, (newVal) => {
       />
       <v-list-item class="pa-1 pb-10"  v-if="drawerLocationState === 'left' || $vuetify.display.smAndUp">
         <v-list-item-title
-          class="text-h5 font-weight-bold text-center"
-          style="line-height: 2rem"
+          class=" font-weight-bold text-center"
+          style="line-height: 2rem; font-size: 24px !important;"
         >
           Amirhossein Zahmatmand
         </v-list-item-title>
@@ -66,16 +66,16 @@ watch(mobile, (newVal) => {
         <span class="text-primary" style="font-size: 12px"> GET IN TOUCH </span>
         <div class="d-flex flex-row mt-5">
           <nuxt-link>
-            <v-icon icon="mdi-email" size="xx-large" />
+            <v-icon icon="mdi-email" size="large" />
           </nuxt-link>
           <nuxt-link>
-            <v-icon icon="mdi-linkedin" size="xx-large" />
+            <v-icon icon="mdi-linkedin" size="large" />
           </nuxt-link>
           <nuxt-link>
-            <v-icon icon="mdi-github" size="xx-large" />
+            <v-icon icon="mdi-github" size="large" />
           </nuxt-link>
           <nuxt-link>
-            <v-icon icon="mdi-instagram" size="xx-large" />
+            <v-icon icon="mdi-instagram" size="large" />
           </nuxt-link>
         </div>
       </v-list-item>

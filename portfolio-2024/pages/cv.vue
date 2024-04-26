@@ -8,9 +8,9 @@ definePageMeta({
 
 const { width, name, mobile } = useDisplay()
 
-watchEffect(() => {
-  console.log(width.value, name.value, mobile.value)
-})
+// watchEffect(() => {
+//   console.log(width.value, name.value, mobile.value)
+// })
 // usePageShow('cv')
 </script>
 
@@ -19,7 +19,7 @@ watchEffect(() => {
   <v-card variant="elevated" rounded="lg" max-width="1000" class="cv-card">
     <!--CV-Header-Start-->
           <v-row justify="start" align="start" >
-            <v-col cols="3">
+            <v-col cols="3" class="pl-sm-0">
               <v-img
                 class="profile-img"
                 height="152"
@@ -66,36 +66,35 @@ watchEffect(() => {
 
       <v-row>
         <v-row class="d-flex flex-wrap">
-          <v-col class="mb-0 pb-0 v-col-sm-3" cols="6">
-            <v-card
-              :height="26"
-              rounded="md"
-              color="grey"
-              variant="outlined"
-              class="px-1 mr-3 mb-1 app-name"
-            >
+          <v-col class="v-col-sm-3 app-name" cols="6">
+<!--            <v-card-->
+<!--              :height="26"-->
+<!--              rounded="md"-->
+<!--              color="grey"-->
+<!--              variant="outlined"-->
+<!--              class="px-1 mr-3 mb-1 app-name"-->
+<!--            >-->
+            <div class="app-name__card">
               <span
-                class="app-name__float text-primary font-14 font-weight-thin "
-                style="padding-top: 0.15rem !important"
+                class="text-primary font-14 font-weight-thin"
                 >APPTUNE</span
               >
-            </v-card>
+            </div>
+<!--            </v-card>-->
           </v-col>
 
-          <v-col class="app-date py-0 v-col-sm-3" cols="6">
-            <v-card
-              :height="26"
-              rounded="md"
-              color="white"
-              variant="text"
-              class="px-2 border-none "
-            >
-              <span
-                class="app-date__float text-primary font-14 font-weight-thin text-truncate"
-                style="padding-top: 0.10rem !important"
-                >Nov 2021 - Sep 2023</span
-              >
-            </v-card>
+          <v-col class="app-date v-col-sm-3" cols="6">
+<!--            <v-card-->
+<!--              :height="26"-->
+<!--              rounded="md"-->
+<!--              color="white"-->
+<!--              variant="text"-->
+<!--              class="px-2 border-none "-->
+<!--            >-->
+            <div class="app-date__card">
+              <span class="text-primary font-14 font-weight-thin">Nov 2021 - Sep 2023</span>
+            </div>
+<!--            </v-card>-->
           </v-col>
 
           <v-col class="section-subtitle mb-0 pb-0 v-col-sm-9" cols="12">
@@ -155,16 +154,25 @@ watchEffect(() => {
   }
 
   .app-name {
-    width: 168px;
-    .app-name__float {
-      float: right;
-    }
+    display: block;
+    text-align: right;
+
+   .app-name__card{
+     text-transform: uppercase;
+     padding-right: 5px;
+     border-radius: 4px;
+     background-color: #ecf7f9;
+   }
   }
 
   .app-date {
     order: 3;
-    .app-date__float {
-      float: right;
+    display: block;
+    padding-top: 0;
+    .app-date__card{
+      text-transform: uppercase;
+      text-align: right !important;
+      padding-right: 5px;
     }
   }
 
@@ -189,10 +197,6 @@ watchEffect(() => {
     padding: 32px 32px;
     margin: 0 !important;
 
-    .app-name {
-      width: 215px !important;
-      max-width: 96%;
-    }
 
     .bio {
       text-align: center;
@@ -211,16 +215,12 @@ watchEffect(() => {
     }
 
     .section-title {
-      padding-left: 1%;
+      padding-left: 0;
     }
 
-    .app-name {
-      max-width: 168px !important;
-      border: none;
-
-      .app-name__float {
-        float: left;
-      }
+    .app-name__card{
+      text-align: left;
+      background-color: unset !important;
     }
 
     .app-date {
