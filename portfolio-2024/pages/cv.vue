@@ -67,34 +67,22 @@ const { width, name, mobile } = useDisplay()
       <v-row>
         <v-row class="d-flex flex-wrap">
           <v-col class="v-col-sm-3 app-name" cols="6">
-<!--            <v-card-->
-<!--              :height="26"-->
-<!--              rounded="md"-->
-<!--              color="grey"-->
-<!--              variant="outlined"-->
-<!--              class="px-1 mr-3 mb-1 app-name"-->
-<!--            >-->
+
             <div class="app-name__card">
               <span
                 class="text-primary font-14 font-weight-thin"
                 >APPTUNE</span
               >
             </div>
-<!--            </v-card>-->
+
           </v-col>
 
           <v-col class="app-date v-col-sm-3" cols="6">
-<!--            <v-card-->
-<!--              :height="26"-->
-<!--              rounded="md"-->
-<!--              color="white"-->
-<!--              variant="text"-->
-<!--              class="px-2 border-none "-->
-<!--            >-->
+
             <div class="app-date__card">
               <span class="text-primary font-14 font-weight-thin">Nov 2021 - Sep 2023</span>
             </div>
-<!--            </v-card>-->
+
           </v-col>
 
           <v-col class="section-subtitle mb-0 pb-0 v-col-sm-9" cols="12">
