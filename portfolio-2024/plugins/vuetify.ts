@@ -34,7 +34,9 @@ export default defineNuxtPlugin((nuxtApp) => {
       },
     }
     vuetifyOptions.display = {
-      mobileBreakpoint :  1280,
+      mobileBreakpoint: 1280,
     }
   })
 })
+
+

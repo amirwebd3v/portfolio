@@ -16,7 +16,7 @@ definePageMeta({
 
 const texts = ref([
   { id: 'text1', words: 'Greetings! I\'m Amir,', order: 0 },
-  { id: 'text2', words: 'A software engineer with 3 years of experience',  order: 1 },
+  { id: 'text2', words: 'A software engineer with 4 years of experience',  order: 1 },
   { id: 'text3', words: 'I build clean, user-friendly websites that make an impact.', order: 2 },
 ])
 
