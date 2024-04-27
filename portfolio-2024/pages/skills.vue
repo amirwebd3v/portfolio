@@ -25,7 +25,7 @@ usePageShow('skills')
           A
           <strong class="text-primary">full-stack software engineer</strong>
           with over
-          <strong class="text-primary">3 years of experience</strong>.
+          <strong class="text-primary">4 years of experience</strong>.
         </v-card-text>
 
         <v-card-text class="text-justify font-16 font-weight-thin pt-0">
@@ -63,9 +63,7 @@ usePageShow('skills')
         <v-card-text class="font-18 pt-0">
           For examples of my work, check out my
           <nuxt-link to="/portfolio" class="text-decoration-none text-primary"
-            >portfolio
-          </nuxt-link>
-          .
+            >portfolio</nuxt-link>.
         </v-card-text>
       </div>
 
@@ -246,8 +244,8 @@ usePageShow('skills')
             </li>
             <li>recruiting and mentoring Junior developers,</li>
             <li>
-              taking on the responsibilities of team members when needed,
-              in order to prevent unnecessary delays and ensure project success.
+              taking on the responsibilities of team members when needed, in
+              order to prevent unnecessary delays and ensure project success.
             </li>
           </ul>
         </v-card-text>
@@ -258,16 +256,15 @@ usePageShow('skills')
       <div>
         <v-card-text class="text-justify font-16 font-weight-thin">
           If your initial thought is that I can’t be the best in everything,
-          it's okay. I will take care of other development sections or any other role you see me best suited for.
+          it's okay. I will take care of other development sections or any other
+          role you see me best suited for.
         </v-card-text>
 
         <v-card-text class="text-justify font-16 font-weight-thin">
-          In cases where you already have an existing team but still need some
-          help, feel free to
-          <nuxt-link to="/contact" class="text-decoration-none text-primary"
-            >contact me
-          </nuxt-link>
-          . I assure you that I will fit in quickly.
+          If you already have an established team and require assistance, please
+          don’t hesitate to  <nuxt-link to="/contact" class="text-decoration-none text-primary"
+        >contact me</nuxt-link>. I assure you that I will seamlessly
+          integrate and provide valuable support.
         </v-card-text>
       </div>
     </v-card>
