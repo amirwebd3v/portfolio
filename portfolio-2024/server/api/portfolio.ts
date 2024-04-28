@@ -8,11 +8,11 @@ interface PortfolioType {
   shortDescription: string;
   tasks: string[];
   fullDescription: string;
-  techWrapUp: TechWrapUp[];
+  technicalSummary: technicalSummary[];
   images: string[];
 }
 
-interface TechWrapUp {
+interface technicalSummary {
   first: string;
   second: string;
 }
