@@ -20,6 +20,13 @@ const isItem = computed(
 )
 const title = computed(() => props.item?.meta?.title)
 const icon = computed(() => props.item?.meta?.icon)
+const hasChildren = computed(() => props.item?.children?.length > 0)
+const isActive = computed(() => {
+  const itemPath = hasChildren.value
+    ? `${props.item?.path}/*`
+    : props.item?.path
+  return useRoute().path.startsWith(itemPath)
+})
 const drawer = useState('drawer')
 </script>
 
@@ -33,6 +40,7 @@ const drawer = useState('drawer')
     color="primary"
     :ripple="false"
     :title="title"
+    :active="isActive"
     @click.stop="$vuetify.display.mobile ? drawer = !drawer : drawer"
   />
 <!--  <v-list-group v-else-if="icon" :prepend-icon="icon" color="primary">-->

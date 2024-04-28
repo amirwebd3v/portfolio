@@ -81,7 +81,7 @@ usePageShow('project')
           >
             <v-card-text>
               <v-img
-                rounded="lg"
+                class="rounded-lg mb-5"
                 v-for="image in project['images']"
                 :src="image"
               />
