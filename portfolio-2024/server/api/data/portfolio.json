@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Dentistry",
+    "subtitle": "Rely on dentists who prioritize their patients' comfort.",
+    "shortDescription": "This website is a web platform that allows to book appointments and review the portfolio of a dentist.",
+    "tasks": [
+      "leading or co-developing their back-ends and front-ends,",
+      "automating the deployment process,",
+      "improving UI/UX design,",
+      "mentoring the team,",
+      "researching possible techs,",
+      "setting up monitoring,",
+      "improving the development process in general."
+    ],
+    "fullDescription" : "lorem",
+    "technicalSummary" : [
+      {
+        "key1" : "value",
+        "key2" : "value",
+        "key3" : "value",
+        "key4" : "value",
+        "key5" : "value"
+
+      }
+    ],
+    "images" : [
+      "/social-image.png"
+    ]
+  },
+  {
+    "title": "zzzz",
+    "subtitle": "zzzz on dentists who prioritize their patients' comfort.",
+    "shortDescription": "zz website is a web platform that allows to book appointments and review the portfolio of a dentist.",
+    "tasks": [
+      "leading or co-developing their back-ends and front-ends,"
+
+    ],
+    "fullDescription" : "lorem",
+    "technicalSummary" : [
+      {
+        "first" : "first wrapup",
+        "second" : "second wrapup"
+      }
+    ],
+    "images" : [
+      "/social-image.png"
+    ]
+  }
+]
