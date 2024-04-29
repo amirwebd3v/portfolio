@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   icon: 'mdi-toolbox',
-  title: 'Skills',
+  title: 'SKILLS',
   drawerIndex: 1,
 })
 
@@ -13,7 +13,7 @@ usePageShow('skills')
     <v-card
       height="auto"
       max-width="1000"
-      class="d-none text-justify"
+      class="d-none text-justify gradiant-transparent"
       id="skills"
     >
       <v-card-title class="pt-10">

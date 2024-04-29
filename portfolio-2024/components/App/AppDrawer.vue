@@ -29,12 +29,14 @@ watch(mobile, (newVal) => {
 <template>
   <v-navigation-drawer
     v-model="drawerState"
-    width="468"
+    width="auto"
     :location="drawerLocationState"
     style="z-index:1004 !important;"
+    class="gradiant-transparent"
+    elevation="10"
   >
 
-    <v-list nav density="compact">
+    <v-list nav density="compact" >
 
       <v-img
         v-if="drawerLocationState === 'left' || $vuetify.display.smAndUp"
@@ -48,6 +50,7 @@ watch(mobile, (newVal) => {
         <v-list-item-title
           class=" font-weight-bold text-center"
           style="line-height: 2rem; font-size: 24px !important;"
+
         >
           Amirhossein Zahmatmand
         </v-list-item-title>
@@ -62,7 +65,7 @@ watch(mobile, (newVal) => {
 
       <AppDrawerItem v-for="route in routes" :key="route.name" :item="route" />
 
-      <v-list-item class="mt-16">
+      <v-list-item class="mt-16" v-if="drawerLocationState === 'left'">
         <span class="text-primary" style="font-size: 12px"> GET IN TOUCH </span>
         <div class="d-flex flex-row mt-5">
           <nuxt-link>
@@ -82,5 +85,4 @@ watch(mobile, (newVal) => {
     </v-list>
   </v-navigation-drawer>
 </template>
-
 

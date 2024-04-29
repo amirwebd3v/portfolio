@@ -12,7 +12,7 @@ usePageShow('project')
 
 <template>
   <v-col cols="12">
-    <v-card height="auto" class="pb-10 d-none" id="project" max-width="1500">
+    <v-card height="auto" class="pb-10 d-none gradiant-transparent" id="project" max-width="1500">
       <v-card-title class="pt-10">
         <h1>{{ project['title'] }}</h1>
       </v-card-title>

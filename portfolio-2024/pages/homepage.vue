@@ -8,7 +8,7 @@
 // }
 definePageMeta({
   icon: 'mdi-home',
-  title: 'Home',
+  title: 'HOME',
   drawerIndex: 0,
 })
 
@@ -39,24 +39,26 @@ useConsoleText(texts.value,'btnGroup' )
     <div class="console-container">
 
         <span id="text1" class="text-primary font-weight-bold" style="font-size: 65px;"/>
-        <span id="text2" style="font-size: 32px;" class="text-secondary"/>
-        <span id="text3" style="font-size: 32px;" class="text-secondary"/>
+        <span id="text2" style="font-size: 32px;" />
+        <span id="text3" style="font-size: 32px;" />
         <div class="console-underscore" id="consoleCursor"
              style="font-size: 32px;">&#95;</div>
 
       <v-sheet class="d-flex bg-transparent mt-16 pt-16 d-none" id="btnGroup">
         <v-btn class="mr-5"
+               color="#BAFF9FE0"
                variant="tonal"
+               rounded="lg"
                width="100"
-               rounded="md"
                to="/skills"
-               elevation="2">Skills</v-btn>
+               elevation="2">SKILLS</v-btn>
         <v-btn class="mr-5"
+               color="#BAFF9FE0"
                variant="tonal"
+               rounded="lg"
                width="100"
-               rounded="md"
                to="/portfolio"
-               elevation="2">Portfolio</v-btn>
+               elevation="2">PORTFOLIO</v-btn>
       </v-sheet>
     </div>
     <div class="light x1"/>

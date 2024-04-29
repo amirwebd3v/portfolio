@@ -1,26 +1,22 @@
 [
   {
     "title": "Dentistry",
-    "subtitle": "Rely on dentists who prioritize their patients' comfort.",
+    "subtitle": "Rely on professional dentists who prioritize their patients' comfort.",
     "shortDescription": "This website is a web platform that allows to book appointments and review the portfolio of a dentist.",
     "tasks": [
-      "leading or co-developing their back-ends and front-ends,",
-      "automating the deployment process,",
-      "improving UI/UX design,",
-      "mentoring the team,",
-      "researching possible techs,",
-      "setting up monitoring,",
-      "improving the development process in general."
+      "A website for a dentist and his/her clients,",
+      "Patients can request for appointments,",
+      "Include portfolio, testimonials,",
+      "With a fully featured Admin Panel."
     ],
-    "fullDescription" : "lorem",
+    "fullDescription" : "A single-page website for a dentist, complete with an admin panel for managing content. Patients can request for appointments and register using phone numbers. They can also view their profiles and previous appointments. The website allows dentists to manipulate content and element styles, providing a flexible and personalized experience. Dentists can showcase their portfolio through pictures and videos.",
     "technicalSummary" : [
       {
-        "key1" : "value",
-        "key2" : "value",
-        "key3" : "value",
-        "key4" : "value",
-        "key5" : "value"
-
+        "Frameworks:" : "Nuxt, Vuetify",
+        "Used Languages:" : "Typescript, Scss, Laravel, PostgresSQL and so on...",
+        "Architecture:" : "Rest API",
+        "Design:" : "Full responsive for all screens.",
+        "SEO:" : "All required matters in Programming side are considered regarding my knowledge."
       }
     ],
     "images" : [

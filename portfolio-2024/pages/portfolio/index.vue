@@ -3,7 +3,7 @@ import type { PortfolioType } from '~/server/api/portfolio'
 
 definePageMeta({
   icon: 'mdi-view-gallery',
-  title: 'Portfolio',
+  title: 'PORTFOLIO',
   drawerIndex: 2,
 })
 
@@ -25,7 +25,7 @@ usePageShow('portfolio')
 
 <template>
   <v-col cols="12">
-    <v-card height="auto" class="pb-10 d-none" id="portfolio" max-width="1500">
+    <v-card height="auto" class="pb-10 d-none gradiant-transparent" id="portfolio" max-width="1500">
       <v-card-title class="pt-10">
         <h1>PORTFOLIO</h1>
       </v-card-title>
@@ -112,9 +112,9 @@ usePageShow('portfolio')
 
                 <v-btn
                   class="mt-5 mx-2"
+                  color="#BAFF9FE0"
                   variant="tonal"
-                  rounded="md"
-                  elevation="2"
+                  rounded="lg"
                   @click="goToProject(project.title)"
                 >
                   Read more...

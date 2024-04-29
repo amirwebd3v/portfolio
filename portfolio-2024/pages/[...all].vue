@@ -14,7 +14,7 @@ export default defineComponent({
 <style scoped>
 .wrapper {
   position: relative;
-  top: calc(50vh - 250px);
+  top: calc(50vh - 468px);
   text-align: center;
   opacity: 0.6;
 }

@@ -10,6 +10,11 @@ html {
   }
 }
 
+
+.gradiant-transparent {
+  background: linear-gradient(to bottom, rgba(8, 35, 45, 0.56), rgb(9, 30, 1)) !important;
+}
+
 .v-card-text {
   line-height: 1.8 !important;
 }
@@ -212,7 +217,7 @@ html {
 }
 
 .wrapper {
-  position: relative;
+  //position: relative;
   text-align: center;
   margin: 0;
   height: 100vh;

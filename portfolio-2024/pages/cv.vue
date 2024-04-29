@@ -6,17 +6,12 @@ definePageMeta({
   layout: 'blank',
 })
 
-const { width, name, mobile } = useDisplay()
 
-// watchEffect(() => {
-//   console.log(width.value, name.value, mobile.value)
-// })
-// usePageShow('cv')
 </script>
 
 <template>
 
-  <v-card variant="elevated" rounded="lg" max-width="1000" class="cv-card">
+  <v-card variant="elevated" rounded="lg" max-width="1000" class="cv-card gradiant-transparent">
     <!--CV-Header-Start-->
           <v-row justify="start" align="start" >
             <v-col cols="3" class="pl-sm-0">
@@ -29,7 +24,7 @@ const { width, name, mobile } = useDisplay()
                 rounded="lg"
               />
             </v-col>
-            <v-col cols="12" sm="6" class="px-0 bio mr-14" >
+            <v-col cols="12" sm="6" class="px-0 bio mr-14 pt-0">
               <h2 class="text-primary">AMIRHOSSEIN ZAHMATMAND</h2>
               <h3 class="font-weight-thin">Front-end Engineer</h3>
               <br />
@@ -149,7 +144,7 @@ const { width, name, mobile } = useDisplay()
      text-transform: uppercase;
      padding-right: 5px;
      border-radius: 4px;
-     background-color: #ecf7f9;
+     background-color: #2a3e02;
    }
   }
 

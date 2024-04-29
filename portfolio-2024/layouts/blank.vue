@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <v-app>
-    <v-container >
+  <v-app class="gradiant-transparent">
+    <v-container  >
       <NuxtPage/>
     </v-container>
   </v-app>
