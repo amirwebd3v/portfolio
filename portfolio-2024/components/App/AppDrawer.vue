@@ -68,16 +68,16 @@ watch(mobile, (newVal) => {
       <v-list-item class="mt-16" v-if="drawerLocationState === 'left'">
         <span class="text-primary" style="font-size: 12px"> GET IN TOUCH </span>
         <div class="d-flex flex-row mt-5">
-          <nuxt-link>
+          <nuxt-link to="mailto:amirdev@gmail.com" class="text-decoration-none text-white">
             <v-icon icon="mdi-email" size="large" />
           </nuxt-link>
-          <nuxt-link>
+          <nuxt-link to="https://linkedin.com/in/amirdev" class="text-decoration-none text-white">
             <v-icon icon="mdi-linkedin" size="large" />
           </nuxt-link>
-          <nuxt-link>
+          <nuxt-link to="https://github.com/AmirDev" class="text-decoration-none text-white">
             <v-icon icon="mdi-github" size="large" />
           </nuxt-link>
-          <nuxt-link>
+          <nuxt-link to="https://instagram.com/amirdev.me" class="text-decoration-none text-white">
             <v-icon icon="mdi-instagram" size="large" />
           </nuxt-link>
         </div>

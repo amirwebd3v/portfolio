@@ -34,8 +34,8 @@ usePageShow('contact')
 
           <div class="order-2 px-2 mx-2">
             <v-icon class="mx-1" icon="mdi-email-outline" size="small" />
-            <nuxt-link to="/homepage" class="text-decoration-none text-primary">
-              amirhidevs@gmail.com
+            <nuxt-link to="mailto:amirdev@gmail.com" class="text-decoration-none text-primary">
+              amirdev@gmail.com
             </nuxt-link>
           </div>
         </div>
@@ -47,8 +47,8 @@ usePageShow('contact')
 
           <div class="order-2 px-2 mx-2">
             <v-icon class="mr-1" icon="mdi-linkedin" size="small" />
-            <nuxt-link to="/homepage" class="text-decoration-none text-primary">
-              EyZi
+            <nuxt-link to="https://linkedin.com/in/amirdev" class="text-decoration-none text-primary">
+              linkedin.com/in/amirdev
             </nuxt-link>
           </div>
         </div>
@@ -60,8 +60,8 @@ usePageShow('contact')
 
           <div class="order-2 px-2 mx-2">
             <v-icon class="mr-1" icon="mdi-instagram" size="small" />
-            <nuxt-link to="/homepage" class="text-decoration-none text-primary">
-              EyZi
+            <nuxt-link to="https://instagram.com/amirdev.me" class="text-decoration-none text-primary">
+              amirdev.me
             </nuxt-link>
           </div>
         </div>
@@ -73,8 +73,8 @@ usePageShow('contact')
 
           <div class="order-2 px-2 mx-2">
             <v-icon class="mr-1" icon="mdi-github" size="small" />
-            <nuxt-link to="/homepage" class="text-decoration-none text-primary">
-              EyZi
+            <nuxt-link to="https://github.com/AmirDev" class="text-decoration-none text-primary">
+              Amirdev
             </nuxt-link>
           </div>
         </div>

@@ -50,7 +50,7 @@ definePageMeta({
           >
           <span class="font-13 px-1">/</span>
           <a
-            href="/linkedin.com/in/amirdev"
+            href="https://linkedin.com/in/amirdev"
             class="text-primary text-decoration-none"
             ><h5 class="font-weight-thin">linkedin.com/in/amirdev</h5></a
           >
@@ -74,7 +74,7 @@ definePageMeta({
           ><h5 class="font-weight-thin">amirdev@gmail.com</h5></a
         >
         <a
-          href="/linkedin.com/in/amirdev"
+          href="https://linkedin.com/in/amirdev"
           class="text-primary text-decoration-none"
           ><h5 class="font-weight-thin">linkedin.com/in/amirdev</h5></a
         >
