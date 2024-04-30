@@ -25,7 +25,7 @@ usePageShow('skills')
           A
           <strong class="text-primary">full-stack software engineer</strong>
           with over
-          <strong class="text-primary">4 years of experience</strong>.
+          <strong class="text-primary">3 years of experience</strong>.
         </v-card-text>
 
         <v-card-text class="text-justify font-16 font-weight-thin pt-0">
