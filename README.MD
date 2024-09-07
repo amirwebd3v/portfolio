@@ -1,4 +1,9 @@
-## 1. Deploy docker image
+## 1. Login to Github image repository
+```shell
+docker login ghcr.io -u amirwebd3v
+```
+
+## 2. Deploy docker image
 ```shell
 sh ./push.sh
 ```
